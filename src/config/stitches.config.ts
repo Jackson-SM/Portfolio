@@ -23,7 +23,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
       2: '13px',
       3: '18px',
       4: '24px',
-      5: '30px',
+      5: '35px',
     },
     transitions: {
       transitionsLow: 'all ease 130ms',

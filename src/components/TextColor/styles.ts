@@ -11,6 +11,9 @@ export const StyledTextColor = styled('h1', {
 
   variants: {
     size: {
+      small_low: {
+        fontSize: '$2',
+      },
       small: {
         fontSize: '$3',
       },
