@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { Navbar } from '../../components/Navbar';
+import { Main } from './components/Main';
+import { SectionHero } from './components/SectionHero';
 
 export function Home() {
   return (
     <>
       <Navbar />
-      <h1>Hero</h1>
-      <h1>Skills</h1>
-      <h1>Footer</h1>
+      <Main>
+        <SectionHero />
+      </Main>
     </>
   );
 }

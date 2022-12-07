@@ -2,10 +2,8 @@ import React from 'react';
 
 import { StyledTextColor } from './styles';
 
-type PropsTextColor = {
-  children: React.ReactNode;
-};
+type PropsTextColor = React.ComponentProps<typeof StyledTextColor>;
 
-export function TextColor({ children }: PropsTextColor) {
-  return <StyledTextColor>{children}</StyledTextColor>;
+export function TextColor({ children, ...props }: PropsTextColor) {
+  return <StyledTextColor {...props}>{children}</StyledTextColor>;
 }
