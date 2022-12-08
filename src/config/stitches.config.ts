@@ -27,6 +27,8 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
     },
     transitions: {
       transitionsLow: 'all ease 130ms',
+      transitionsMedium: 'all ease 300ms',
+      transitionsHard: 'all ease 600ms',
     },
   },
   utils: {
@@ -36,7 +38,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
   },
   media: {
     large: '(min-width: 1080px)',
-    medium: '(min-width: 768px)',
+    medium: '(max-width: 650px)',
     small: '(max-width: 400px)',
   },
 });

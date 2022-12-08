@@ -23,7 +23,7 @@ export function SectionHero() {
         </ContainerNetworks>
         <ContainerPersonInfo>
           <StyledPhoto src={photo} />
-          <TextColor size="medium">
+          <TextColor size="medium" css={{ marginTop: '20px' }}>
             <strong>Jackson Magalhães</strong>
           </TextColor>
           <TextColor size="small_low">
