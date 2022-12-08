@@ -11,9 +11,6 @@ export function Navbar() {
   const toggleMinimizedNavbar = () => {
     setMinimizedNavbar((minimizedValueBefore) => !minimizedValueBefore);
   };
-
-  console.log(minimizedNavbar);
-
   return (
     <StyledNavbar>
       <TextColor>

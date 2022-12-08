@@ -41,7 +41,7 @@ export const StyledNavbar = styled('nav', {
 
   '@medium': {
     [`& ${LinksNavbar}`]: {
-      position: 'absolute',
+      position: 'fixed',
 
       flexDirection: 'column',
       alignItems: 'center',

@@ -1,6 +1,6 @@
 import { styled } from '../../config/stitches.config';
 
-export const StyledTextColor = styled('h1', {
+const TextColorCss = {
   '& strong': {
     color: '$primary',
   },
@@ -23,6 +23,13 @@ export const StyledTextColor = styled('h1', {
       large: {
         fontSize: '$5',
       },
+      large_xx: {
+        fontSize: '$6',
+      },
     },
   },
-});
+};
+
+export const StyledTextColor = styled('h1', TextColorCss);
+
+export const StyledTextColorSpan = styled('span', TextColorCss);
