@@ -1,5 +1,12 @@
 import React from 'react';
 
-export function Button() {
-  return <div>Button</div>;
+import { StyledButton } from './styles';
+
+type ButtonProps = React.ComponentProps<typeof StyledButton> & {
+  as?: React.ElementType;
+  href?: string;
+};
+
+export function Button({ children, ...props }: ButtonProps) {
+  return <StyledButton {...props}>{children}</StyledButton>;
 }
