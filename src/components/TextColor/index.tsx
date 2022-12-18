@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { StyledTextColor, StyledTextColorSpan } from './styles';
+import { StyledTextColor } from './styles';
 
-type PropsTextColor = React.ComponentProps<typeof StyledTextColor>;
+type PropsTextColor = React.ComponentProps<typeof StyledTextColor> & {
+  as?: React.ElementType;
+};
 export function TextColor({ children, ...props }: PropsTextColor) {
   return <StyledTextColor {...props}>{children}</StyledTextColor>;
-}
-
-export function TextColorSpan({ children, ...props }: PropsTextColor) {
-  return <StyledTextColorSpan {...props}>{children}</StyledTextColorSpan>;
 }

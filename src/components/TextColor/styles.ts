@@ -31,5 +31,3 @@ const TextColorCss = {
 };
 
 export const StyledTextColor = styled('h1', TextColorCss);
-
-export const StyledTextColorSpan = styled('span', TextColorCss);

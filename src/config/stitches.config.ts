@@ -21,10 +21,10 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
     fontSizes: {
       1: '12px',
       2: '13px',
-      3: '18px',
-      4: '24px',
+      3: '16px',
+      4: '26px',
       5: '35px',
-      6: '60px',
+      6: '70px',
     },
     transitions: {
       transitionsLow: 'all ease 130ms',

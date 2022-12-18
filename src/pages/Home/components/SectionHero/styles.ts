@@ -10,7 +10,8 @@ export const ContainerHero = styled('div', {
   gap: 20,
 
   '@large': {
-    flexDirection: 'column',
+    flexDirection: 'column-reverse',
+    gap: 50,
   },
 });
 
@@ -18,36 +19,28 @@ export const ContainerInfo = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  flexBasis: '50%',
   gap: 20,
 });
 
 export const ContainerApresentation = styled('div', {
   display: 'flex',
-  flexDirection: 'row',
   justifyContent: 'center',
-  flexBasis: '50%',
-  width: '100%',
-
-  '@large': {
-    flexDirection: 'column-reverse',
-  },
-});
-
-export const ContainerApresentationInfo = styled('div', {
-  display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
+
+  maxWidth: '50%',
+
   gap: 10,
-  flexBasis: '50%',
 
   '@large': {
+    maxWidth: '80%',
     textAlign: 'center',
   },
 });
 
 export const StyledPhoto = styled('img', {
-  width: 250,
-  height: 250,
+  width: 300,
+  height: 300,
 
   borderRadius: '100%',
 
@@ -60,8 +53,6 @@ export const ContainerNetworks = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-
-  flexBasis: '50%',
 
   borderRadius: 5,
 

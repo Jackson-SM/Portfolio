@@ -18,10 +18,10 @@ export const ContainerLinks = styled('div', {
   variants: {
     OpenMinimizedNavbar: {
       false: {
-        top: '100%',
+        left: '-100%',
       },
       true: {
-        top: '0',
+        left: '0',
       },
     },
   },

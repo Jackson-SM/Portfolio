@@ -50,6 +50,8 @@ export const StyledNavbar = styled('nav', {
       background: 'rgba(33, 33, 33, 0.92)',
       width: '100%',
 
+      top: 0,
+
       [`& ${ButtonOpenOrClosedNavbar}`]: {
         display: 'flex',
       },
