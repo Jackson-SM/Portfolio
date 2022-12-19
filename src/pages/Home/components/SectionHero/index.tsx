@@ -1,4 +1,3 @@
-import { DiscordLogoIcon, LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import React from 'react';
 
 import photo from '../../../../assets/photo.jpeg';
@@ -15,16 +14,16 @@ export function SectionHero() {
           Hi, i'm <strong>Web Developer</strong>.
         </TextColor>
         <TextColor size="small" as="span" css={{ color: '$textDark' }}>
-          Sou um <strong>desenvolvedor</strong> web e sempre fui apaixonado em TI. Comecei a programar com 15 anos
-          utilizando php e python, hoje utilizo diversas tecnologias e busco avançar meus conhecimentos na área cada vez
-          mais. Sou um desenvolvedor com poucas experiências profissionais porém uma grande produtividade e acostumado a
-          trabalhar em equipe.
+          Sou um desenvolvedor web e sempre fui apaixonado em TI. Comecei a programar com 15 anos utilizando php e
+          python, hoje utilizo diversas tecnologias e busco <strong>avançar</strong> meus conhecimentos na área cada vez
+          mais. Sou um desenvolvedor com poucas experiências profissionais porém uma grande{' '}
+          <strong>produtividade</strong> e acostumado a <strong>trabalhar em equipe</strong>.
         </TextColor>
-        <Box css={{ gap: 10 }}>
-          <Button outlined="primary" rounded css={{ width: 'max-content' }}>
+        <Box css={{ gap: 10, '@large': { justifyContent: 'center' } }}>
+          <Button color="primary" rounded css={{ width: 'max-content' }}>
             Download CV
           </Button>
-          <Button outlined="primary" rounded css={{ width: 'max-content' }}>
+          <Button color="primary" rounded css={{ width: 'max-content' }}>
             About Me
           </Button>
         </Box>
@@ -32,11 +31,19 @@ export function SectionHero() {
 
       <ContainerInfo>
         <ContainerPersonInfo>
-          <Box css={{ padding: 5, background: '$primaryLight', borderRadius: '100%' }}>
+          <Box css={{ padding: 5, borderRadius: '100%', linearGradient: '245deg,$primary,transparent' }}>
             <StyledPhoto src={photo} />
           </Box>
-          <TextColor size="medium" css={{ marginTop: '20px' }}>
-            <strong>Jackson Magalhães</strong>
+          <TextColor
+            size="medium"
+            css={{
+              marginTop: '20px',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              linearGradient: 'to right,$primary 50%,$primaryLight',
+            }}
+          >
+            Jackson Magalhães
           </TextColor>
           <TextColor size="small_low" as="span">
             <strong>Full-Stack</strong> Developer

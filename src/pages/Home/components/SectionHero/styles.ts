@@ -5,13 +5,16 @@ export const ContainerHero = styled('div', {
 
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'space-around',
   flexDirection: 'row-reverse',
-  gap: 40,
+  gap: 20,
+
+  height: 'calc(100vh - 60px)',
 
   '@large': {
     flexDirection: 'column-reverse',
     gap: 50,
+    height: 'auto',
   },
 });
 
@@ -27,7 +30,7 @@ export const ContainerApresentation = styled('div', {
   justifyContent: 'center',
   flexDirection: 'column',
 
-  maxWidth: '40%',
+  flexBasis: '50%',
 
   gap: 20,
 

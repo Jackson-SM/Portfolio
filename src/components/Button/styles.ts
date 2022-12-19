@@ -1,6 +1,6 @@
 import { styled } from '../../config/stitches.config';
 
-const ButtonCSS = {
+export const StyledButton = styled('button', {
   textDecoration: 'none',
   color: 'white',
   border: 'none',
@@ -25,10 +25,6 @@ const ButtonCSS = {
   '& svg': {
     width: '18px',
     height: '18px',
-  },
-
-  defaultVariants: {
-    outlined: 'default',
   },
 
   '&[disabled]': {
@@ -129,6 +125,4 @@ const ButtonCSS = {
       },
     },
   },
-};
-
-export const StyledButton = styled('button', ButtonCSS);
+});

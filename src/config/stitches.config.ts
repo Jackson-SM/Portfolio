@@ -4,7 +4,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
   theme: {
     colors: {
       primary: 'hsl(342, 79%, 51%)',
-      primaryLight: 'hsl(342, 79%, 51%)',
+      primaryLight: 'hsl(342, 89%, 62%)',
 
       secundary: 'hsl(87, 82%, 60%)',
       secundaryLight: 'hsl(87, 90%, 70%)',
@@ -34,7 +34,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
   },
   utils: {
     linearGradient: (value: string) => ({
-      background: `linear-gradient(${value})`,
+      backgroundImage: `linear-gradient(${value})`,
     }),
   },
   media: {

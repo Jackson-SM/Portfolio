@@ -26,6 +26,11 @@ export const ButtonOpenOrClosedNavbar = styled('button', {
   },
 });
 
+export const StyledLogoImage = styled('img', {
+  width: 40,
+  height: 40,
+});
+
 export const StyledNavbar = styled('nav', {
   height: 60,
 
