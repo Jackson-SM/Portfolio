@@ -1,9 +1,9 @@
 import { styled } from '../../../../../config/stitches.config';
 
 export const StyledSkillIndividualCard = styled('div', {
-  linearGradient: 'to right,transparent 90%, $primary',
-  border: '2px solid $backgroundLight',
-
+  /*   linearGradient: 'to right,transparent 90%, $primary',
+  border: '2px solid $backgroundLight'
+  */
   height: 200,
   borderRadius: 5,
   display: 'flex',
@@ -38,7 +38,7 @@ export const TitleSkillIndividual = styled('h1', {
 
 export const TextSkillIndividual = styled('p', {
   fontSize: '0.85em',
-  background: 'linear-gradient(to right,$textDark 80%,$primary)',
+  /* background: 'linear-gradient(to right,$textDark 80%,$primary)',
   WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
+  WebkitTextFillColor: 'transparent', */
 });
