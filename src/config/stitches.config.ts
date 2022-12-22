@@ -39,7 +39,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
   },
   media: {
     large: '(max-width: 900px)',
-    medium: '(max-width: 650px)',
+    medium: '(max-width: 750px)',
     small: '(max-width: 400px)',
   },
 });

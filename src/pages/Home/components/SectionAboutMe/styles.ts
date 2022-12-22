@@ -11,5 +11,12 @@ export const TopSectionAboutMe = styled('div', {
 });
 
 export const ContainerSkillsIndividualCards = styled('div', {
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  gap: 20,
+  padding: 40,
+
+  '@medium': {
+    gridTemplateColumns: 'repeat(1, 1fr)',
+  },
 });
