@@ -1,3 +1,4 @@
+import { TextColor } from '../../../../components/TextColor';
 import { styled } from '../../../../config/stitches.config';
 
 export const ContainerSectionAboutMe = styled('div', {
@@ -7,7 +8,27 @@ export const ContainerSectionAboutMe = styled('div', {
 export const TopSectionAboutMe = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  paddingLeft: 40,
+
+  '& h1': {
+    position: 'relative',
+
+    overflow: 'hidden',
+
+    '&::before': {
+      content: '',
+
+      position: 'absolute',
+
+      height: '100%',
+      width: '100%',
+
+      left: 0,
+      top: '94%',
+
+      background: 'linear-gradient(to right, $primary 30%, transparent)',
+    },
+  },
 });
 
 export const ContainerSkillsIndividualCards = styled('div', {
