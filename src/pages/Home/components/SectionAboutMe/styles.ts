@@ -5,7 +5,7 @@ export const ContainerSectionAboutMe = styled('div', {
   padding: 10,
 });
 
-export const TopSectionAboutMe = styled('div', {
+export const TopSection = styled('div', {
   display: 'flex',
   alignItems: 'center',
   paddingLeft: 40,

@@ -8,8 +8,6 @@ export const StyledSkillIndividualCard = styled('div', {
   borderRadius: 5,
   display: 'flex',
 
-  paddingRight: 50,
-
   fontSize: 15,
 });
 

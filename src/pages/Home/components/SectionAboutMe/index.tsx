@@ -3,7 +3,7 @@ import React from 'react';
 
 import { TextColor } from '../../../../components/TextColor';
 import { SkillIndividualCard } from './SkillIndividualCard';
-import { ContainerSectionAboutMe, ContainerSkillsIndividualCards, TopSectionAboutMe } from './styles';
+import { ContainerSectionAboutMe, ContainerSkillsIndividualCards, TopSection } from './styles';
 
 export function SectionAboutMe() {
   const contentSkillIndividual = [
@@ -31,11 +31,11 @@ export function SectionAboutMe() {
 
   return (
     <ContainerSectionAboutMe>
-      <TopSectionAboutMe>
+      <TopSection>
         <TextColor>
           <strong>About Me</strong>
         </TextColor>
-      </TopSectionAboutMe>
+      </TopSection>
       <ContainerSkillsIndividualCards>
         {contentSkillIndividual.map((skill) => {
           return <SkillIndividualCard key={skill.title} title={skill.title} text={skill.text} icon={skill.icon} />;
