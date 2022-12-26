@@ -1,9 +1,18 @@
-import { DesktopIcon, MagicWandIcon, RocketIcon, StackIcon } from '@radix-ui/react-icons';
+import {
+  DesktopIcon,
+  MagicWandIcon,
+  RocketIcon,
+  StackIcon,
+} from '@radix-ui/react-icons';
 import React from 'react';
 
 import { TextColor } from '../../../../components/TextColor';
 import { SkillIndividualCard } from './SkillIndividualCard';
-import { ContainerSectionAboutMe, ContainerSkillsIndividualCards, TopSection } from './styles';
+import {
+  ContainerSectionAboutMe,
+  ContainerSkillsIndividualCards,
+  TopSection,
+} from './styles';
 
 export function SectionAboutMe() {
   const contentSkillIndividual = [
@@ -38,7 +47,14 @@ export function SectionAboutMe() {
       </TopSection>
       <ContainerSkillsIndividualCards>
         {contentSkillIndividual.map((skill) => {
-          return <SkillIndividualCard key={skill.title} title={skill.title} text={skill.text} icon={skill.icon} />;
+          return (
+            <SkillIndividualCard
+              key={skill.title}
+              title={skill.title}
+              text={skill.text}
+              icon={skill.icon}
+            />
+          );
         })}
       </ContainerSkillsIndividualCards>
     </ContainerSectionAboutMe>

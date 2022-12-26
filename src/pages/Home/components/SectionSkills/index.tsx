@@ -1,12 +1,29 @@
 import React from 'react';
+import { SiJavascript, SiTypescript, SiReact, SiHtml5, SiCss3, SiNodedotjs, SiPhp } from 'react-icons/si';
 
 import { TextColor } from '../../../../components/TextColor';
+import { SelectStackType } from './SelectStackType';
+import { Stack } from './Stack';
+import { ContainerStacks } from './Stack/styles';
 import { ContainerSectionSkills, TopContainerSkills } from './styles';
 
+interface ISubStacksProps {
+  stack: string;
+}
+
+interface IStacksProps {
+  stack: string;
+  color?: string;
+  icon?: JSX.Element;
+  subStacks?: ISubStacksProps[];
+}
+
 export function SectionSkills() {
-  const stacks = [
+  const stacks: IStacksProps[] = [
     {
       stack: 'Javascript',
+      color: '#ffd82b',
+      icon: <SiJavascript />,
       subStacks: [
         {
           stack: 'JQuery',
@@ -18,10 +35,14 @@ export function SectionSkills() {
     },
     {
       stack: 'Typescript',
+      color: '#2bbcff',
+      icon: <SiTypescript />,
     },
     {
       stack: 'React JS',
-      subsTacks: [
+      color: '#2b8eff',
+      icon: <SiReact />,
+      subStacks: [
         {
           stack: 'Hooks',
         },
@@ -53,18 +74,24 @@ export function SectionSkills() {
     },
     {
       stack: 'HTML5',
-      subsTacks: [
+      color: '#ff8800',
+      icon: <SiHtml5 />,
+      subStacks: [
         {
-          stacks: 'Bootstrap',
+          stack: 'Bootstrap',
         },
       ],
     },
     {
       stack: 'CSS3',
+      color: '#2bb1ff',
+      icon: <SiCss3 />,
     },
     {
       stack: 'Node.JS',
-      subsTacks: [
+      color: '#319724',
+      icon: <SiNodedotjs />,
+      subStacks: [
         {
           stack: 'Design Patterns / Repository',
         },
@@ -96,9 +123,10 @@ export function SectionSkills() {
     },
     {
       stack: 'PHP',
+      color: '#6b8adf',
+      icon: <SiPhp />,
     },
   ];
-  const subStacks = [];
 
   return (
     <ContainerSectionSkills>
@@ -106,7 +134,13 @@ export function SectionSkills() {
         <TextColor>
           <strong>Stacks</strong>
         </TextColor>
+        <SelectStackType />
       </TopContainerSkills>
+      <ContainerStacks>
+        {stacks.map((stack) => {
+          return <Stack key={stack.stack} stack={stack.stack} color={stack.color} icon={stack.icon} />;
+        })}
+      </ContainerStacks>
     </ContainerSectionSkills>
   );
 }
