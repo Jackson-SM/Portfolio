@@ -40,7 +40,7 @@ export function SectionSkills() {
     },
     {
       stack: 'React JS',
-      color: '#2b8eff',
+      color: '#0f7fff',
       icon: <SiReact />,
       subStacks: [
         {
@@ -84,7 +84,7 @@ export function SectionSkills() {
     },
     {
       stack: 'CSS3',
-      color: '#2bb1ff',
+      color: '#2ba0ff',
       icon: <SiCss3 />,
     },
     {

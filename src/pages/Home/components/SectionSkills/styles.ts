@@ -9,4 +9,5 @@ export const ContainerSectionSkills = styled('div', {
 
 export const TopContainerSkills = styled(TopSection, {
   display: 'flex',
+  justifyContent: 'space-between',
 });

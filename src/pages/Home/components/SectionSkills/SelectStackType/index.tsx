@@ -3,14 +3,27 @@ import React from 'react';
 
 import {
   StyledSelectContent,
+  StyledSelectGroup,
   StyledSelectIcon,
   StyledSelectItem,
+  StyledSelectItemText,
+  StyledSelectLabel,
   StyledSelectPortal,
   StyledSelectRoot,
   StyledSelectTrigger,
   StyledSelectValue,
   StyledSelectViewport,
 } from './styles';
+
+type SelectItemProps = React.ComponentProps<typeof StyledSelectItem>;
+
+function SelectItem({ children, ...props }: SelectItemProps) {
+  return (
+    <StyledSelectItem {...props}>
+      <StyledSelectItemText>{children}</StyledSelectItemText>
+    </StyledSelectItem>
+  );
+}
 
 export function SelectStackType() {
   return (
@@ -24,9 +37,12 @@ export function SelectStackType() {
       <StyledSelectPortal>
         <StyledSelectContent>
           <StyledSelectViewport>
-            <StyledSelectItem value="backend">Back-end</StyledSelectItem>
-            <StyledSelectItem value="frontend">Front-end</StyledSelectItem>
-            <StyledSelectItem value="database">Database</StyledSelectItem>
+            <StyledSelectGroup>
+              <StyledSelectLabel>Stacks</StyledSelectLabel>
+              <SelectItem value="backend">Back-end</SelectItem>
+              <SelectItem value="frontend">Front-end</SelectItem>
+              <SelectItem value="database">Database</SelectItem>
+            </StyledSelectGroup>
           </StyledSelectViewport>
         </StyledSelectContent>
       </StyledSelectPortal>

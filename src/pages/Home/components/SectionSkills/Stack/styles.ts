@@ -1,8 +1,26 @@
 import { styled } from '../../../../../config/stitches.config';
 
 export const StyledStack = styled('div', {
-  padding: 15,
-  borderRadius: 3,
+  padding: 25,
+  borderRadius: 15,
+  position: 'relative',
+  zIndex: '1',
+
+  '&::before': {
+    content: '',
+
+    position: 'absolute',
+
+    width: '100%',
+    height: '2px',
+
+    top: 5,
+    left: 0,
+
+    background: '$background',
+
+    zIndex: '-1',
+  },
 });
 
 export const StringStack = styled('span', {
@@ -25,10 +43,12 @@ export const StyledIconStack = styled('div', {
   padding: 10,
   width: 'max-content',
   borderRadius: '50%',
-  marginTop: 'calc(-15px - 15px)',
-  marginLeft: 'calc(100% - 15px)',
+  marginTop: 'calc(-15px - 25px)',
+  marginLeft: 'calc(100% - 5px)',
 
   display: 'flex',
+
+  zIndex: '1',
 
   '& svg': {
     width: 20,

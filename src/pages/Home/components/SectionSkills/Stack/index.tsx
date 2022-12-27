@@ -19,7 +19,7 @@ export function Stack({ stack, color, icon }: IStackProps) {
   const colorExist = color ?? '$primary';
 
   return (
-    <StyledStack css={{ background: `linear-gradient(to right,transparent,${colorExist})` }}>
+    <StyledStack css={{ background: `linear-gradient(to right,transparent 10%,${colorExist})` }}>
       <StyledIconStack
         css={{
           '& svg': {
@@ -31,7 +31,7 @@ export function Stack({ stack, color, icon }: IStackProps) {
       </StyledIconStack>
       <ContainerStackAndAmountProject>
         <StringStack>{stack}</StringStack>
-        <StringProjectAmount>Project 5+</StringProjectAmount>
+        <StringProjectAmount>Projetos +2</StringProjectAmount>
       </ContainerStackAndAmountProject>
     </StyledStack>
   );
