@@ -1,10 +1,13 @@
-import { ChevronDownIcon } from '@radix-ui/react-icons';
+import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 import React from 'react';
+
+import { stackTypes } from '..';
 
 import {
   StyledSelectContent,
   StyledSelectGroup,
   StyledSelectIcon,
+  StyledSelectIconIndicator,
   StyledSelectItem,
   StyledSelectItemText,
   StyledSelectLabel,
@@ -21,15 +24,22 @@ function SelectItem({ children, ...props }: SelectItemProps) {
   return (
     <StyledSelectItem {...props}>
       <StyledSelectItemText>{children}</StyledSelectItemText>
+      <StyledSelectIconIndicator>
+        <CheckIcon />
+      </StyledSelectIconIndicator>
     </StyledSelectItem>
   );
 }
 
-export function SelectStackType() {
+type SelectStackTypeProps = {
+  changeValueStackType: (stacks: stackTypes) => void;
+};
+
+export function SelectStackType({ changeValueStackType }: SelectStackTypeProps) {
   return (
-    <StyledSelectRoot>
+    <StyledSelectRoot defaultValue="all" onValueChange={changeValueStackType}>
       <StyledSelectTrigger>
-        <StyledSelectValue placeholder="Front-end" />
+        <StyledSelectValue placeholder="Select an Stack" />
         <StyledSelectIcon>
           <ChevronDownIcon />
         </StyledSelectIcon>
@@ -39,8 +49,9 @@ export function SelectStackType() {
           <StyledSelectViewport>
             <StyledSelectGroup>
               <StyledSelectLabel>Stacks</StyledSelectLabel>
-              <SelectItem value="backend">Back-end</SelectItem>
+              <SelectItem value="all">All Stacks</SelectItem>
               <SelectItem value="frontend">Front-end</SelectItem>
+              <SelectItem value="backend">Back-end</SelectItem>
               <SelectItem value="database">Database</SelectItem>
             </StyledSelectGroup>
           </StyledSelectViewport>

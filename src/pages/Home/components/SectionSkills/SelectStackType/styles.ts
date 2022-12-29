@@ -49,8 +49,14 @@ export const StyledSelectItem = styled(Select.Item, {
   cursor: 'pointer',
   outline: 'none',
 
+  '& svg': {
+    width: 18,
+    height: 18,
+  },
+
   '&:hover': {
     background: '$primary',
   },
 });
+export const StyledSelectIconIndicator = styled(Select.ItemIndicator, {});
 export const StyledSelectItemText = styled(Select.ItemText, {});
