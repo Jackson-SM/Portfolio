@@ -16,7 +16,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
       backgroundLight: 'hsl(0, 0%, 15%)',
 
       text: 'hsl(0, 0%, 95%)',
-      textDark: 'hsl(0, 0%, 90%)',
+      textDark: 'hsl(0, 0%, 70%)',
     },
     fontSizes: {
       1: '12px',
