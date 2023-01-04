@@ -17,9 +17,9 @@ export const ContainerSkillsIndividualCards = styled('div', {
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: 40,
 
-  padding: 10,
+  padding: 20,
 
   '@medium': {
-    gridTemplateColumns: 'repeat(1, 400px)',
+    gridTemplateColumns: 'repeat(1, 1fr)',
   },
 });

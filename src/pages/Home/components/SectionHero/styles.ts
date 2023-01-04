@@ -35,19 +35,29 @@ export const ContainerApresentation = styled('div', {
   gap: 20,
 
   '@large': {
-    maxWidth: '80%',
     textAlign: 'center',
+
+    '& h1': {
+      fontSize: '$5',
+    },
+
+    '& span': {
+      fontSize: '$2',
+    },
   },
 });
 
 export const StyledPhoto = styled('img', {
-  width: 300,
-  height: 300,
+  width: '300px',
 
   borderRadius: '100%',
 
   padding: 0,
   margin: 0,
+
+  '@large': {
+    width: '200px',
+  },
 });
 
 export const ContainerNetworks = styled('div', {

@@ -1,6 +1,6 @@
 import { styled } from '../../config/stitches.config';
 
-const TextColorCss = {
+export const StyledTextColor = styled('h1', {
   '& strong': {
     color: '$primary',
   },
@@ -28,6 +28,4 @@ const TextColorCss = {
       },
     },
   },
-};
-
-export const StyledTextColor = styled('h1', TextColorCss);
+});

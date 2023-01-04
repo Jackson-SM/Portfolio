@@ -10,11 +10,16 @@ export const StyledSkillIndividualCard = styled('div', {
   flexDirection: 'column',
   gap: 10,
 
+  margin: '0 auto',
+
   overflow: 'hidden',
 
   fontSize: 15,
 
-  '@large': {},
+  '@large': {
+    margin: '0',
+    maxWidth: '100%',
+  },
 });
 
 export const ContainerIcon = styled('div', {
@@ -30,6 +35,10 @@ export const ContainerIcon = styled('div', {
     height: 30,
 
     color: '$text',
+  },
+
+  '&::before': {
+    content: '',
   },
 });
 
@@ -49,6 +58,7 @@ export const TitleSkillIndividual = styled('h1', {
 export const TextSkillIndividual = styled('p', {
   fontSize: '0.85em',
   color: '$textDark2',
+  width: '100%',
   /* background: 'linear-gradient(to right,$textDark 80%,$primary)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent', */
