@@ -4,38 +4,51 @@ export const StyledSkillIndividualCard = styled('div', {
   /*   linearGradient: 'to right,transparent 90%, $primary',
   border: '2px solid $backgroundLight'
   */
-  height: 200,
+  maxWidth: '400px',
   borderRadius: 5,
   display: 'flex',
+  flexDirection: 'column',
+  gap: 10,
+
+  overflow: 'hidden',
 
   fontSize: 15,
+
+  '@large': {},
 });
 
 export const ContainerIcon = styled('div', {
-  padding: 5,
+  linearGradient: '45deg,$primary, transparent',
+
+  width: 'max-content',
+  display: 'flex',
+  borderRadius: '5px',
+  padding: 10,
 
   '& svg': {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
 
-    color: '$primary',
+    color: '$text',
   },
 });
 
 export const ContainerContentSkill = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  padding: 10,
 
-  gap: 20,
+  gap: 5,
 });
 
 export const TitleSkillIndividual = styled('h1', {
   fontSize: '1.5em',
+  fontFamily: 'Mulish',
+  color: '$textDark',
 });
 
 export const TextSkillIndividual = styled('p', {
   fontSize: '0.85em',
+  color: '$textDark2',
   /* background: 'linear-gradient(to right,$textDark 80%,$primary)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent', */

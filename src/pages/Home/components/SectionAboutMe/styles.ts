@@ -15,9 +15,11 @@ export const TopSection = styled('div', {
 export const ContainerSkillsIndividualCards = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
-  gap: 20,
+  gap: 40,
+
+  padding: 10,
 
   '@medium': {
-    gridTemplateColumns: 'repeat(1, 1fr)',
+    gridTemplateColumns: 'repeat(1, 400px)',
   },
 });

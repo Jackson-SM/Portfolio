@@ -1,4 +1,3 @@
-import { CodeIcon } from '@radix-ui/react-icons';
 import React from 'react';
 
 import {
@@ -15,7 +14,7 @@ type SkillIndividualProps = React.ComponentProps<typeof StyledSkillIndividualCar
   icon: JSX.Element;
 };
 
-export function SkillIndividualCard({ title, text, icon, ...props }: SkillIndividualProps) {
+export function SkillIndividualCard({ title, text, icon }: SkillIndividualProps) {
   return (
     <StyledSkillIndividualCard>
       <ContainerIcon>{icon}</ContainerIcon>
