@@ -15,11 +15,12 @@ export const TopContainerSectionTwo = styled('div', {
 
 export const ContentSectionTwo = styled('div', {
   display: 'flex',
+  justifyContent: 'space-around',
 });
 
 export const ContentSkillsSection = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'space-between',
   gap: 30,
 });
-export const ContainerCarouselProjects = styled('div', {});

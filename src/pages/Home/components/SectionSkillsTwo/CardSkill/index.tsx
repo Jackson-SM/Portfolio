@@ -36,7 +36,7 @@ export function CardSkill({ title, icon, description, color, knowledgeAmount }: 
       <ContentSkillCard>
         <TitleSkillCard>{title}</TitleSkillCard>
         <DescriptionCard>{description}</DescriptionCard>
-        <ProgressBar css={{ '&::before': { background: `${color}` } }} />
+        <ProgressBar css={{ '&::before': { background: `${color}`, width: `${knowledgeAmount}%` } }} />
       </ContentSkillCard>
     </StyledSkillsCard>
   );
