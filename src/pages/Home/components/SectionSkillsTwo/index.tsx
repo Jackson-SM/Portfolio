@@ -31,30 +31,8 @@ function SectionSkillsTwo() {
     { title: 'Megacine Dashboard', element: <img src={megacineDashboard} alt="" /> },
   ];
 
-  const backPositionItem = () => {
-    setPositionItem((position) => (position <= 0 ? projects.length - 1 : position - 1));
-  };
-  const nextPositionItem = useCallback(() => {
-    setPositionItem((position) => (position >= projects.length - 1 ? 0 : position + 1));
-  }, [positionItem]);
-
-  const loopInMiliseconds = 6000; // 6 Seconds
-
-  useEffect(() => {
-    const position = setTimeout(async () => {
-      nextPositionItem();
-    }, loopInMiliseconds);
-    return () => {
-      clearInterval(position);
-    };
-  }, [positionItem]);
-
-  console.log(positionItem);
-
   return (
     <ContainerSectionTwo>
-      <button onClick={backPositionItem}>Back Item</button>
-      <button onClick={nextPositionItem}>Next Item</button>
       <TopContainerSectionTwo>
         <TitleSection color="primary">My Skills</TitleSection>
         <TitleSection size="md">My Experiences</TitleSection>
@@ -83,7 +61,7 @@ function SectionSkillsTwo() {
             knowledgeAmount={74}
           />
         </ContentSkillsSection>
-        <Carousel positionItems={positionItem} onClick={backPositionItem}>
+        <Carousel items={projects}>
           {projects.map((item, key) => {
             return (
               <CarouselItem
