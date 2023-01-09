@@ -13,7 +13,7 @@ export const CarouselWrapper = styled('div', {
 export const CarouselItems = styled('div', {
   display: 'flex',
 
-  transition: 'transform 700ms ease-in-out',
+  transition: 'transform 400ms ease-in-out',
 });
 
 export const CarouselItem = styled('div', {

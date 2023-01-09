@@ -1,7 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { SiCss3, SiHtml5, SiJavascript } from 'react-icons/si';
 
-import imgs from '../../../../assets/photo_2.jpg';
+import dashboard from '../../../../assets/projects-images/dashboard.png';
+import desafioHero from '../../../../assets/projects-images/desafio_hero.png';
+import formLogin from '../../../../assets/projects-images/form_login.png';
+import formRegister from '../../../../assets/projects-images/form_register.png';
+import infiniteHero from '../../../../assets/projects-images/infinite_hero.png';
+import megacineDashboard from '../../../../assets/projects-images/megacine_dashboard.png';
+import megacineHero from '../../../../assets/projects-images/megacine_hero.png';
+import rocketVPSHero from '../../../../assets/projects-images/rocket_vps_hero.png';
+import rocketSpaceHero from '../../../../assets/projects-images/rocketspace_hero.png';
 import { Carousel } from '../../../../components/Carousel';
 import { CarouselItem } from '../../../../components/Carousel/styles';
 import { TitleSection } from '../TitleSection';
@@ -11,17 +19,23 @@ import { ContainerSectionTwo, ContentSectionTwo, ContentSkillsSection, TopContai
 function SectionSkillsTwo() {
   const [positionItem, setPositionItem] = useState<number>(0);
 
-  const itemsCarousel = [
-    { element: <img src={imgs} alt="" /> },
-    { element: <img src={imgs} alt="" /> },
-    { element: <img src={imgs} alt="" /> },
+  const projects = [
+    { title: 'Infinite', element: <img src={infiniteHero} alt="" /> },
+    { title: 'MegaCine', element: <img src={megacineHero} alt="" /> },
+    { title: 'RocketSpace', element: <img src={rocketSpaceHero} alt="" /> },
+    { title: 'Rocket VPS', element: <img src={rocketVPSHero} alt="" /> },
+    { title: 'Dashboard', element: <img src={dashboard} alt="" /> },
+    { title: 'Desafio', element: <img src={desafioHero} alt="" /> },
+    { title: 'Form Login', element: <img src={formLogin} alt="" /> },
+    { title: 'Form Register', element: <img src={formRegister} alt="" /> },
+    { title: 'Megacine Dashboard', element: <img src={megacineDashboard} alt="" /> },
   ];
 
   const backPositionItem = () => {
-    setPositionItem((position) => (position <= 0 ? itemsCarousel.length - 1 : position - 1));
+    setPositionItem((position) => (position <= 0 ? projects.length - 1 : position - 1));
   };
   const nextPositionItem = useCallback(() => {
-    setPositionItem((position) => (position >= itemsCarousel.length - 1 ? 0 : position + 1));
+    setPositionItem((position) => (position >= projects.length - 1 ? 0 : position + 1));
   }, [positionItem]);
 
   const loopInMiliseconds = 6000; // 6 Seconds
@@ -52,25 +66,25 @@ function SectionSkillsTwo() {
             icon={<SiHtml5 />}
             description="I Have 3 years Experience in HTML and i Completed 100+ HTML Projects"
             color="#fc6a26"
-            knowledgeAmount={62}
+            knowledgeAmount={100}
           />
           <CardSkill
             title="Cascading Style Sheets(CSS)"
             icon={<SiCss3 />}
             description="I Have 3 years Experience in HTML and i Completed 100+ HTML Projects"
             color="#2695fc"
-            knowledgeAmount={45}
+            knowledgeAmount={75}
           />
           <CardSkill
             title="Hyper Text Markup Language(HTML)"
             icon={<SiJavascript />}
             description="I Have 3 years Experience in HTML and i Completed 100+ HTML Projects"
             color="#fce726"
-            knowledgeAmount={24}
+            knowledgeAmount={74}
           />
         </ContentSkillsSection>
         <Carousel positionItems={positionItem} onClick={backPositionItem}>
-          {itemsCarousel.map((item, key) => {
+          {projects.map((item, key) => {
             return (
               <CarouselItem
                 // eslint-disable-next-line react/no-array-index-key
