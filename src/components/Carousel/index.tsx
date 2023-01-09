@@ -1,3 +1,4 @@
+import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import React, { useCallback, useEffect, useState } from 'react';
 
 import {
@@ -28,6 +29,12 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
   const nextPositionItem = useCallback(() => {
     setPositionItem((position) => (position >= items.length - 1 ? 0 : position + 1));
   }, [positionItem]);
+  const changePositionItem = useCallback(
+    (index: number) => {
+      setPositionItem(index);
+    },
+    [positionItem],
+  );
 
   const loopInMiliseconds = 6000; // 6 Seconds
 
@@ -43,13 +50,18 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
   return (
     <CarouselContainer>
       <ElementsStyleds>
-        <ButtonNextBack onClick={nextPositionItem}>Next</ButtonNextBack>
-        <ButtonNextBack onClick={backPositionItem}>Back</ButtonNextBack>
+        <ButtonNextBack onClick={backPositionItem}>
+          <ArrowLeftIcon />
+        </ButtonNextBack>
+        <ButtonNextBack onClick={nextPositionItem}>
+          <ArrowRightIcon />
+        </ButtonNextBack>
         <ContainerIndexCircles>
-          <IndexCircles />
-          <IndexCircles />
-          <IndexCircles />
-          <IndexCircles />
+          {items.map((item, index) => {
+            return (
+              <IndexCircles key={index} current={index === positionItem} onClick={() => changePositionItem(index)} />
+            );
+          })}
         </ContainerIndexCircles>
       </ElementsStyleds>
       <CarouselWrapper>

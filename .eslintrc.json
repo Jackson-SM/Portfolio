@@ -26,6 +26,7 @@
     "prettier"
   ],
   "rules": {
+    "react/no-array-index-key": "off",
     "react/require-default-props": "off",
     "react/no-unescaped-entities": "off",
     "react/jsx-props-no-spreading": "off",

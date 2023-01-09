@@ -42,12 +42,20 @@ export const ElementsStyleds = styled('div', {
   position: 'absolute',
 
   zIndex: 2,
+
+  padding: '10px',
 });
 
 export const ContainerIndexCircles = styled('div', {
   display: 'flex',
+  justifyContent: 'center',
+
   gap: 5,
-  top: '97%',
+  width: '100%',
+  height: '10px',
+
+  alignSelf: 'end',
+  justifySelf: 'center',
 
   position: 'absolute',
 
@@ -57,12 +65,43 @@ export const IndexCircles = styled('div', {
   height: 8,
   width: 8,
 
+  transition: 'all ease 200ms',
+
   borderRadius: '50%',
 
-  background: 'red',
+  background: '$textDark2',
+
+  cursor: 'pointer',
+
+  variants: {
+    current: {
+      true: {
+        borderRadius: 10,
+        width: 25,
+        background: 'white',
+      },
+    },
+  },
 });
 
 export const ButtonNextBack = styled('button', {
   height: '50px',
   width: '50px',
+
+  borderRadius: '50%  ',
+
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+  background: 'linear-gradient($background, transparent)',
+
+  outline: 'none',
+  border: 'none',
+
+  '& svg': {
+    width: 20,
+    height: 20,
+    color: '$text',
+  },
 });
