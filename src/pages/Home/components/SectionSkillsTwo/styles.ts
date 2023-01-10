@@ -17,6 +17,16 @@ export const ContentSectionTwo = styled('div', {
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
+  gap: 10,
+
+  '@large': {
+    flexDirection: 'column',
+    alignItems: 'start',
+  },
+
+  '@medium': {
+    alignItems: 'center',
+  },
 });
 
 export const ContentSkillsSection = styled('div', {

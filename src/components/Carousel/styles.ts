@@ -104,4 +104,14 @@ export const ButtonNextBack = styled('button', {
     height: 20,
     color: '$text',
   },
+
+  '@medium': {
+    height: 25,
+    width: 25,
+
+    '& svg': {
+      width: 15,
+      height: 15,
+    },
+  },
 });

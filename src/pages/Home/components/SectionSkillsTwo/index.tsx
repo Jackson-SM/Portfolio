@@ -61,7 +61,7 @@ function SectionSkillsTwo() {
             knowledgeAmount={74}
           />
         </ContentSkillsSection>
-        <Carousel items={projects} itemsPerScroll={2} />
+        <Carousel items={projects} />
       </ContentSectionTwo>
     </ContainerSectionTwo>
   );
