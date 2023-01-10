@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import {
   ButtonNextBack,
   CarouselContainer,
+  CarouselItem,
   CarouselItems,
   CarouselWrapper,
   ContainerIndexCircles,
@@ -11,8 +12,8 @@ import {
   IndexCircles,
 } from './styles';
 
-type itemsCarousel = {
-  title: string;
+export type itemsCarousel = {
+  title?: string;
   element: JSX.Element;
 };
 
@@ -26,15 +27,19 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
   const backPositionItem = () => {
     setPositionItem((position) => (position <= 0 ? items.length - 1 : position - 1));
   };
+
   const nextPositionItem = useCallback(() => {
-    setPositionItem((position) => (position >= items.length - 1 ? 0 : position + 1));
+    setPositionItem((position) => (position >= items.length / (itemsPerScroll ?? 1) - 1 ? 0 : position + 1));
   }, [positionItem]);
+
   const changePositionItem = useCallback(
     (index: number) => {
       setPositionItem(index);
     },
     [positionItem],
   );
+
+  const itemsIsOdd = items.length % 2 > 0;
 
   const loopInMiliseconds = 6000; // 6 Seconds
 
@@ -58,14 +63,35 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
         </ButtonNextBack>
         <ContainerIndexCircles>
           {items.map((item, index) => {
+            const indexPerScroll = items.length / (itemsPerScroll ?? 1);
+            const condition = index <= indexPerScroll;
             return (
-              <IndexCircles key={index} current={index === positionItem} onClick={() => changePositionItem(index)} />
+              condition && (
+                <IndexCircles key={index} current={index === positionItem} onClick={() => changePositionItem(index)} />
+              )
             );
           })}
         </ContainerIndexCircles>
       </ElementsStyleds>
       <CarouselWrapper>
-        <CarouselItems css={{ transform: `translateX(-${positionItem * 100}%)` }}>{children}</CarouselItems>
+        <CarouselItems css={{ transform: `translateX(-${positionItem * 100}%)` }}>
+          {items.map((item, index) => {
+            return (
+              <CarouselItem
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                css={{
+                  width: `${100 / (itemsPerScroll ?? 1)}%`,
+                  '& img': {
+                    width: `100%`,
+                  },
+                }}
+              >
+                {item.element}
+              </CarouselItem>
+            );
+          })}
+        </CarouselItems>
       </CarouselWrapper>
     </CarouselContainer>
   );

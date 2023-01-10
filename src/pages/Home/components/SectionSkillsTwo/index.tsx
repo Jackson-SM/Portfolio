@@ -10,7 +10,7 @@ import megacineDashboard from '../../../../assets/projects-images/megacine_dashb
 import megacineHero from '../../../../assets/projects-images/megacine_hero.png';
 import rocketVPSHero from '../../../../assets/projects-images/rocket_vps_hero.png';
 import rocketSpaceHero from '../../../../assets/projects-images/rocketspace_hero.png';
-import { Carousel } from '../../../../components/Carousel';
+import { Carousel, itemsCarousel } from '../../../../components/Carousel';
 import { CarouselItem } from '../../../../components/Carousel/styles';
 import { TitleSection } from '../TitleSection';
 import { CardSkill } from './CardSkill';
@@ -19,7 +19,7 @@ import { ContainerSectionTwo, ContentSectionTwo, ContentSkillsSection, TopContai
 function SectionSkillsTwo() {
   const [positionItem, setPositionItem] = useState<number>(0);
 
-  const projects = [
+  const projects: itemsCarousel[] = [
     { title: 'Infinite', element: <img src={infiniteHero} alt="" /> },
     { title: 'MegaCine', element: <img src={megacineHero} alt="" /> },
     { title: 'RocketSpace', element: <img src={rocketSpaceHero} alt="" /> },
@@ -61,24 +61,7 @@ function SectionSkillsTwo() {
             knowledgeAmount={74}
           />
         </ContentSkillsSection>
-        <Carousel items={projects}>
-          {projects.map((item, key) => {
-            return (
-              <CarouselItem
-                // eslint-disable-next-line react/no-array-index-key
-                key={key}
-                css={{
-                  '& img': {
-                    width: '100%',
-                    height: '100%',
-                  },
-                }}
-              >
-                {item.element}
-              </CarouselItem>
-            );
-          })}
-        </Carousel>
+        <Carousel items={projects} itemsPerScroll={2} />
       </ContentSectionTwo>
     </ContainerSectionTwo>
   );
