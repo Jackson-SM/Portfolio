@@ -3,6 +3,7 @@ import { SiCss3, SiHtml5, SiJavascript } from 'react-icons/si';
 
 import dashboard from '../../../../assets/projects-images/dashboard.png';
 import desafioHero from '../../../../assets/projects-images/desafio_hero.png';
+import desafioHeroFrontEnd from '../../../../assets/projects-images/desafio-front-end.png';
 import formLogin from '../../../../assets/projects-images/form_login.png';
 import formRegister from '../../../../assets/projects-images/form_register.png';
 import infiniteHero from '../../../../assets/projects-images/infinite_hero.png';
@@ -20,15 +21,19 @@ function SectionSkillsTwo() {
   const [positionItem, setPositionItem] = useState<number>(0);
 
   const projects: itemsCarousel[] = [
-    { title: 'Infinite', element: <img src={infiniteHero} alt="" /> },
-    { title: 'MegaCine', element: <img src={megacineHero} alt="" /> },
-    { title: 'RocketSpace', element: <img src={rocketSpaceHero} alt="" /> },
-    { title: 'Rocket VPS', element: <img src={rocketVPSHero} alt="" /> },
-    { title: 'Dashboard', element: <img src={dashboard} alt="" /> },
-    { title: 'Desafio', element: <img src={desafioHero} alt="" /> },
-    { title: 'Form Login', element: <img src={formLogin} alt="" /> },
-    { title: 'Form Register', element: <img src={formRegister} alt="" /> },
-    { title: 'Megacine Dashboard', element: <img src={megacineDashboard} alt="" /> },
+    {
+      title: 'Infinite',
+      cover: infiniteHero,
+      samples: [infiniteHero, infiniteHero, infiniteHero],
+    },
+    { title: 'MegaCine', cover: megacineHero, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'RocketSpace', cover: rocketSpaceHero, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Rocket VPS', cover: rocketVPSHero, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Dashboard', cover: dashboard, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Desafio', cover: desafioHero, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Form Login', cover: formLogin, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Form Register', cover: formRegister, samples: [infiniteHero, infiniteHero, infiniteHero] },
+    { title: 'Megacine Dashboard', cover: megacineDashboard, samples: [infiniteHero, infiniteHero, infiniteHero] },
   ];
 
   return (

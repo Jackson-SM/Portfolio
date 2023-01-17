@@ -5,7 +5,6 @@ export const CarouselContainer = styled('div', {
   borderRadius: '10px',
 
   maxWidth: '740px',
-  overflow: 'hidden',
 
   display: 'flex',
   alignItems: 'center',
@@ -18,6 +17,9 @@ export const CarouselWrapper = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  borderRadius: 5,
+  overflow: 'hidden',
 });
 export const CarouselItems = styled('div', {
   display: 'flex',

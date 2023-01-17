@@ -1,6 +1,7 @@
 import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { Gallery } from '../Gallery';
 import {
   ButtonNextBack,
   CarouselContainer,
@@ -14,7 +15,8 @@ import {
 
 export type itemsCarousel = {
   title?: string;
-  element: JSX.Element;
+  cover: string;
+  samples?: string[];
 };
 
 type CarouselProps = React.ComponentProps<typeof CarouselContainer> & {
@@ -22,7 +24,8 @@ type CarouselProps = React.ComponentProps<typeof CarouselContainer> & {
   items: itemsCarousel[];
 };
 export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
-  const [positionItem, setPositionItem] = useState<number>(0);
+  const [positionItem, setPositionItem] = useState(0);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   const backPositionItem = () => {
     setPositionItem((position) => (position <= 0 ? items.length - 1 : position - 1));
@@ -39,9 +42,11 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
     [positionItem],
   );
 
-  const itemsIsOdd = items.length % 2 > 0;
-
   const loopInMiliseconds = 6000; // 6 Seconds
+
+  const changeGalleryOpened = () => {
+    setGalleryOpen((opened) => !opened);
+  };
 
   useEffect(() => {
     const position = setTimeout(async () => {
@@ -53,46 +58,53 @@ export function Carousel({ children, itemsPerScroll, items }: CarouselProps) {
   }, [positionItem]);
 
   return (
-    <CarouselContainer>
-      <ElementsStyleds>
-        <ButtonNextBack onClick={backPositionItem}>
-          <ArrowLeftIcon />
-        </ButtonNextBack>
-        <ButtonNextBack onClick={nextPositionItem}>
-          <ArrowRightIcon />
-        </ButtonNextBack>
-        <ContainerIndexCircles>
-          {items.map((item, index) => {
-            const indexPerScroll = items.length / (itemsPerScroll ?? 1);
-            const condition = index <= indexPerScroll;
-            return (
-              condition && (
-                <IndexCircles key={index} current={index === positionItem} onClick={() => changePositionItem(index)} />
-              )
-            );
-          })}
-        </ContainerIndexCircles>
-      </ElementsStyleds>
-      <CarouselWrapper>
-        <CarouselItems css={{ transform: `translateX(-${positionItem * 100}%)` }}>
-          {items.map((item, index) => {
-            return (
-              <CarouselItem
-                // eslint-disable-next-line react/no-array-index-key
-                key={index}
-                css={{
-                  width: `${100 / (itemsPerScroll ?? 1)}%`,
-                  '& img': {
-                    width: `100%`,
-                  },
-                }}
-              >
-                {item.element}
-              </CarouselItem>
-            );
-          })}
-        </CarouselItems>
-      </CarouselWrapper>
-    </CarouselContainer>
+    <>
+      <CarouselContainer onClick={changeGalleryOpened}>
+        <ElementsStyleds>
+          <ButtonNextBack onClick={backPositionItem}>
+            <ArrowLeftIcon />
+          </ButtonNextBack>
+          <ButtonNextBack onClick={nextPositionItem}>
+            <ArrowRightIcon />
+          </ButtonNextBack>
+          <ContainerIndexCircles>
+            {items.map((item, index) => {
+              const indexPerScroll = items.length / (itemsPerScroll ?? 1);
+              const condition = index <= indexPerScroll;
+              return (
+                condition && (
+                  <IndexCircles
+                    key={index}
+                    current={index === positionItem}
+                    onClick={() => changePositionItem(index)}
+                  />
+                )
+              );
+            })}
+          </ContainerIndexCircles>
+        </ElementsStyleds>
+        <CarouselWrapper>
+          <CarouselItems css={{ transform: `translateX(-${positionItem * 100}%)` }}>
+            {items.map((item, index) => {
+              return (
+                <CarouselItem
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={index}
+                  css={{
+                    width: `${100 / (itemsPerScroll ?? 1)}%`,
+                    '& img': {
+                      width: `100%`,
+                    },
+                  }}
+                >
+                  {item.cover}
+                </CarouselItem>
+              );
+            })}
+          </CarouselItems>
+        </CarouselWrapper>
+      </CarouselContainer>
+      <Gallery imgsInfo={items} galleryOpen={galleryOpen} />
+    </>
   );
 }

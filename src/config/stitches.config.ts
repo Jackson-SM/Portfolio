@@ -15,6 +15,10 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
       background: 'hsl(0, 0%, 5%)',
       backgroundLight: 'hsl(0, 0%, 15%)',
 
+      backgroundTransparence: 'hsl(0, 0%, 15%, 0.9)',
+      backgroundTransparence2: 'hsl(0, 0%, 15%, 0.5)',
+      backgroundTransparenc3: 'hsl(0, 0%, 15%, 0.3)',
+
       text: 'hsl(0, 0%, 95%)',
       textDark: 'hsl(0, 0%, 70%)',
       textDark2: 'hsl(0, 0%, 60%)',
