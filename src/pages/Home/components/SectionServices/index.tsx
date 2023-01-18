@@ -6,7 +6,7 @@ import { TitleSection } from '../TitleSection';
 import { SkillIndividualCard } from './SkillIndividualCard';
 import { ContainerSectionAboutMe, ContainerSkillsIndividualCards, TopSection } from './styles';
 
-export function SectionAboutMe() {
+export function SectionServices() {
   const contentSkillIndividual = [
     {
       title: 'Front-End',

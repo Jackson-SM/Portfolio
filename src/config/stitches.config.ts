@@ -3,8 +3,8 @@ import { createStitches } from '@stitches/react';
 export const { styled, globalCss, keyframes, theme, createTheme } = createStitches({
   theme: {
     colors: {
-      primary: 'hsl(342, 79%, 51%)',
-      primaryLight: 'hsl(342, 89%, 62%)',
+      primary: 'hsl(350, 74%, 51%)',
+      primaryLight: 'hsl(350, 89%, 62%)',
 
       secundary: 'hsl(87, 82%, 60%)',
       secundaryLight: 'hsl(87, 90%, 70%)',

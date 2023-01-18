@@ -5,7 +5,6 @@ import {
   ContentSkillCard,
   DescriptionCard,
   IconContainer,
-  ProgressBar,
   StyledIcon,
   StyledSkillsCard,
   TitleSkillCard,
@@ -16,10 +15,9 @@ interface IPropsCardSkill extends React.ComponentProps<typeof StyledSkillsCard> 
   icon: JSX.Element;
   description: string;
   color: string;
-  knowledgeAmount: number;
 }
 
-export function CardSkill({ title, icon, description, color, knowledgeAmount }: IPropsCardSkill) {
+export function CardSkill({ title, icon, description, color }: IPropsCardSkill) {
   return (
     <StyledSkillsCard>
       <IconContainer>
@@ -36,7 +34,6 @@ export function CardSkill({ title, icon, description, color, knowledgeAmount }: 
       <ContentSkillCard>
         <TitleSkillCard>{title}</TitleSkillCard>
         <DescriptionCard>{description}</DescriptionCard>
-        <ProgressBar css={{ '&::before': { background: `${color}`, width: `${knowledgeAmount}%` } }} />
       </ContentSkillCard>
     </StyledSkillsCard>
   );

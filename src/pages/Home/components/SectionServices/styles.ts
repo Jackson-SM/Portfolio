@@ -10,6 +10,7 @@ export const ContainerSectionAboutMe = styled('div', {
 export const TopSection = styled('div', {
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
 });
 
 export const ContainerSkillsIndividualCards = styled('div', {

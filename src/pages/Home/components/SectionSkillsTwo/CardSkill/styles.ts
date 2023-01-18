@@ -14,8 +14,8 @@ export const StyledIcon = styled('div', {
   borderRadius: '50%',
 
   '& svg': {
-    width: 20,
-    height: 20,
+    width: 22,
+    height: 22,
   },
 });
 
@@ -33,27 +33,4 @@ export const DescriptionCard = styled('p', {
   color: '$textDark',
 
   maxWidth: '300px',
-});
-export const ProgressBar = styled('div', {
-  width: '100%',
-  height: '4px',
-
-  borderRadius: '10px',
-
-  background: '$backgroundLight',
-
-  position: 'relative',
-  overflow: 'hidden',
-
-  '&::before': {
-    content: '',
-
-    position: 'absolute',
-
-    width: '100%',
-    height: '100%',
-
-    top: 0,
-    left: 0,
-  },
 });

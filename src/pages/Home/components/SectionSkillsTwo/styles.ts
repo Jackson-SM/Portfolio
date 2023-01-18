@@ -9,19 +9,23 @@ export const ContainerSectionTwo = styled('div', {
 
 export const TopContainerSectionTwo = styled('div', {
   display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   flexDirection: 'column',
   gap: 20,
 });
 
 export const ContentSectionTwo = styled('div', {
   display: 'flex',
+  alignItems: 'start',
   justifyContent: 'space-around',
-  alignItems: 'center',
-  gap: 10,
+  gap: 20,
+
+  padding: 10,
 
   '@large': {
     flexDirection: 'column',
-    alignItems: 'start',
+    alignItems: 'center',
   },
 
   '@medium': {
@@ -29,8 +33,38 @@ export const ContentSectionTwo = styled('div', {
   },
 });
 
-export const ContentSkillsSection = styled('div', {
+export const ContentSkillsTop = styled('div', {
+  background: '$backgroundTransparence2',
+  padding: 5,
+  margin: 5,
+  borderRadius: 5,
+
+  position: 'relative',
+
+  '& svg': {
+    position: 'absolute',
+    width: 30,
+    height: 30,
+    top: -10,
+    left: '95%',
+
+    color: '$textDark',
+  },
+});
+export const ContentSkillsBody = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  gap: 30,
+  gap: 20,
+});
+export const ContentSkillTitle = styled('h1', {
+  color: '$textDark2',
+  display: 'flex',
+  alignContent: 'center',
+  justifyContent: 'center',
+});
+
+export const ContentSkillsSection = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 350px))',
+  gap: 10,
 });

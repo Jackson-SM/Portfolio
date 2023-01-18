@@ -2,8 +2,9 @@ import React from 'react';
 
 import { Navbar } from '../../components/Navbar';
 import { Main } from './components/Main';
-import { SectionAboutMe } from './components/SectionAboutMe';
+import { GeneralInformation } from './components/SectionGeneralInformation';
 import { SectionHero } from './components/SectionHero';
+import { SectionServices } from './components/SectionServices';
 import SectionSkillsTwo from './components/SectionSkillsTwo';
 
 export function Home() {
@@ -12,8 +13,9 @@ export function Home() {
       <Navbar />
       <Main>
         <SectionHero />
-        <SectionAboutMe />
+        <SectionServices />
         <SectionSkillsTwo />
+        <GeneralInformation />
       </Main>
     </>
   );
