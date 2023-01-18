@@ -37,7 +37,7 @@ export function SectionProjects() {
   return (
     <ContainerSectionProjects>
       <TopSections>
-        <TitleSection color="primary">Projetos</TitleSection>
+        <TitleSection color="primary">Meus Projetos</TitleSection>
       </TopSections>
       <ContentSectionProjects>
         <Carousel items={projects} />

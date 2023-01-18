@@ -125,7 +125,7 @@ function SectionSkillsTwo() {
   return (
     <ContainerSectionTwo>
       <TopSections>
-        <TitleSection color="primary">My Skills</TitleSection>
+        <TitleSection color="primary">Minhas Habilidades</TitleSection>
       </TopSections>
       <ContentSectionTwo>
         <ContentSkillsSection>
