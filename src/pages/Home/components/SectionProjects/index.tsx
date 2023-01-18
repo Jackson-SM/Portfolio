@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ContainerSectionProjects } from './styles';
+
 export function SectionProjects() {
-  return <div>SectionProjects</div>;
+  return <ContainerSectionProjects>SectionProjects</ContainerSectionProjects>;
 }
