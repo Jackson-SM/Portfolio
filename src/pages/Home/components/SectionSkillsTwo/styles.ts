@@ -7,14 +7,6 @@ export const ContainerSectionTwo = styled('div', {
   gap: 20,
 });
 
-export const TopContainerSectionTwo = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  gap: 20,
-});
-
 export const ContentSectionTwo = styled('div', {
   display: 'flex',
   alignItems: 'start',

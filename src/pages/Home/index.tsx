@@ -4,6 +4,7 @@ import { Navbar } from '../../components/Navbar';
 import { Main } from './components/Main';
 import { GeneralInformation } from './components/SectionGeneralInformation';
 import { SectionHero } from './components/SectionHero';
+import { SectionProjects } from './components/SectionProjects';
 import { SectionServices } from './components/SectionServices';
 import SectionSkillsTwo from './components/SectionSkillsTwo';
 
@@ -16,6 +17,7 @@ export function Home() {
         <SectionServices />
         <SectionSkillsTwo />
         <GeneralInformation />
+        <SectionProjects />
       </Main>
     </>
   );

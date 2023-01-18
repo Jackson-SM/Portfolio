@@ -2,6 +2,7 @@ import { CodeIcon, MagicWandIcon, StackIcon } from '@radix-ui/react-icons';
 import React from 'react';
 import { BiCodeBlock } from 'react-icons/bi';
 
+import { TopSections } from '../../../../components/TopSections';
 import { TitleSection } from '../TitleSection';
 import { SkillIndividualCard } from './SkillIndividualCard';
 import { ContainerSectionAboutMe, ContainerSkillsIndividualCards, TopSection } from './styles';
@@ -32,9 +33,9 @@ export function SectionServices() {
 
   return (
     <ContainerSectionAboutMe>
-      <TopSection>
+      <TopSections>
         <TitleSection color="primary">About Me</TitleSection>
-      </TopSection>
+      </TopSections>
       <ContainerSkillsIndividualCards>
         {contentSkillIndividual.map((skill) => {
           return <SkillIndividualCard key={skill.title} title={skill.title} text={skill.text} icon={skill.icon} />;
