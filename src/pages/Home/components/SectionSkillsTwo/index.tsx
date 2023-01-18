@@ -136,7 +136,13 @@ function SectionSkillsTwo() {
           <ContentSkillsBody>
             {stacksFront.map((stack) => {
               return (
-                <CardSkill title={stack.title} color={stack.color} icon={stack.icon} description={stack.description} />
+                <CardSkill
+                  key={stack.color}
+                  title={stack.title}
+                  color={stack.color}
+                  icon={stack.icon}
+                  description={stack.description}
+                />
               );
             })}
           </ContentSkillsBody>
@@ -149,7 +155,13 @@ function SectionSkillsTwo() {
           <ContentSkillsBody>
             {stacksBack.map((stack) => {
               return (
-                <CardSkill title={stack.title} color={stack.color} icon={stack.icon} description={stack.description} />
+                <CardSkill
+                  key={stack.color}
+                  title={stack.title}
+                  color={stack.color}
+                  icon={stack.icon}
+                  description={stack.description}
+                />
               );
             })}
           </ContentSkillsBody>
@@ -162,7 +174,13 @@ function SectionSkillsTwo() {
           <ContentSkillsBody>
             {stacksDatabases.map((stack) => {
               return (
-                <CardSkill title={stack.title} color={stack.color} icon={stack.icon} description={stack.description} />
+                <CardSkill
+                  key={stack.color}
+                  title={stack.title}
+                  color={stack.color}
+                  icon={stack.icon}
+                  description={stack.description}
+                />
               );
             })}
           </ContentSkillsBody>

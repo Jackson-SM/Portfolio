@@ -3,34 +3,39 @@ import { styled } from '../../config/stitches.config';
 export const CarouselContainer = styled('div', {
   position: 'relative',
   borderRadius: '10px',
-
-  maxWidth: '740px',
-
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  overflowX: 'hidden',
+  pointerEvents: 'none',
 });
 export const CarouselWrapper = styled('div', {
-  overflowX: 'hidden',
-  position: 'relative',
-
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  alignItems: 'start',
+  justifyContent: 'start',
+
+  height: '100%',
 
   borderRadius: 5,
   overflow: 'hidden',
+
+  scrollBehavior: 'smooth',
+
+  pointerEvents: 'auto',
 });
 export const CarouselItems = styled('div', {
   display: 'flex',
+  justifyContent: 'start',
+  alignItems: 'start',
+  gap: 5,
 
   transition: 'transform 400ms ease-in-out',
 });
 
 export const CarouselItem = styled('div', {
   flex: 'none',
-  width: '100%',
   display: 'flex',
+
+  '@large': {
+    width: '50%',
+  },
 });
 
 export const ElementsStyleds = styled('div', {
@@ -63,32 +68,14 @@ export const ContainerIndexCircles = styled('div', {
 
   zIndex: 3,
 });
-export const IndexCircles = styled('div', {
-  height: 8,
-  width: 8,
-
-  transition: 'all ease 200ms',
-
-  borderRadius: '50%',
-
-  background: '$textDark2',
-
-  cursor: 'pointer',
-
-  variants: {
-    current: {
-      true: {
-        borderRadius: 10,
-        width: 25,
-        background: 'white',
-      },
-    },
-  },
-});
 
 export const ButtonNextBack = styled('button', {
   height: '50px',
   width: '50px',
+
+  pointerEvents: 'auto',
+  cursor: 'pointer',
+  zIndex: '22',
 
   borderRadius: '50%  ',
 

@@ -31,7 +31,7 @@ export function GeneralInformation() {
     <ContainerGeneralInformation>
       <ContentGeneralInformation>
         {generalInformations.map((info) => {
-          return <CardGeneralInformation title={info.title} number={info.number} />;
+          return <CardGeneralInformation key={info.title} title={info.title} number={info.number} />;
         })}
       </ContentGeneralInformation>
     </ContainerGeneralInformation>

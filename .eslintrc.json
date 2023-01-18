@@ -26,6 +26,7 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
     "react/no-array-index-key": "off",
     "react/require-default-props": "off",
     "react/no-unescaped-entities": "off",
