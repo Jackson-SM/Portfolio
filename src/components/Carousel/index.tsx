@@ -36,14 +36,14 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
       <ElementsStyleds>
         <ButtonNextBack
           onClick={(event) => {
-            carouselItemsRef.current?.scrollBy(-350, 200);
+            carouselItemsRef.current?.scrollBy(-450, 0);
           }}
         >
           <ArrowLeftIcon />
         </ButtonNextBack>
         <ButtonNextBack
           onClick={(event) => {
-            carouselItemsRef.current?.scrollBy(350, 200);
+            carouselItemsRef.current?.scrollBy(450, 0);
           }}
         >
           <ArrowRightIcon />
@@ -52,12 +52,22 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
       <CarouselWrapper
         ref={carouselItemsRef}
         onWheel={(event) => {
-          window.scrollBy(0, 300);
+          if (event.deltaY > 0) {
+            carouselItemsRef.current?.scrollBy(450, 0);
+          }
+          if (event.deltaY < 0) {
+            carouselItemsRef.current?.scrollBy(-450, 0);
+          }
         }}
       >
         <CarouselItems
-          css={{
-            transform: `translateX(calc(-${350}))`,
+          onMouseEnter={(event) => {
+            const body = document.querySelector('body');
+            body?.classList.add('scrolled');
+          }}
+          onMouseLeave={(event) => {
+            const body = document.querySelector('body');
+            body?.classList.remove('scrolled');
           }}
         >
           {items.map((item, index) => {

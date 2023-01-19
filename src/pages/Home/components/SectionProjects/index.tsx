@@ -1,16 +1,24 @@
 import React from 'react';
-import { SiBootstrap, SiCss3, SiHtml5, SiJavascript, SiNodedotjs, SiPhp, SiReact } from 'react-icons/si';
+import { SiBootstrap, SiCss3, SiHtml5, SiJava, SiJavascript, SiNodedotjs, SiPhp, SiReact } from 'react-icons/si';
 
 import dashboard from '../../../../assets/projects-images/dashboard.png';
 import desafioHero from '../../../../assets/projects-images/desafio_hero.png';
 import formLogin from '../../../../assets/projects-images/form_login.png';
 import formRegister from '../../../../assets/projects-images/form_register.png';
-import infiniteAbout from '../../../../assets/projects-images/infinite_about.png';
+import formUploadMegacine from '../../../../assets/projects-images/form_step_upload_megacine.png';
+import infiniteAbout1 from '../../../../assets/projects-images/infinite_about_1.png';
+import infiniteAbout2 from '../../../../assets/projects-images/infinite_about_2.png';
+import infiniteAbout3 from '../../../../assets/projects-images/infinite_about_3.png';
 import infiniteCards from '../../../../assets/projects-images/infinite_cards.png';
 import infiniteFooter from '../../../../assets/projects-images/infinite_footer.png';
 import infiniteHero from '../../../../assets/projects-images/infinite_hero.png';
+import infinitePurchase from '../../../../assets/projects-images/infinite_purchase.png';
+import megacineCard from '../../../../assets/projects-images/megacine_card_3.png';
 import megacineDashboard from '../../../../assets/projects-images/megacine_dashboard.png';
 import megacineHero from '../../../../assets/projects-images/megacine_hero.png';
+import megacineResponsive from '../../../../assets/projects-images/megacine_responsive.png';
+import megacineResponsive2 from '../../../../assets/projects-images/megacine_responsive2.png';
+import megacineSerie from '../../../../assets/projects-images/page_serie.png';
 import rocketVPSHero from '../../../../assets/projects-images/rocket_vps_hero.png';
 import rocketSpaceHero from '../../../../assets/projects-images/rocketspace_hero.png';
 import { Carousel, itemsCarousel } from '../../../../components/Carousel';
@@ -25,7 +33,15 @@ export function SectionProjects() {
     {
       title: 'Infinite',
       cover: infiniteHero,
-      samples: [infiniteAbout, infiniteCards, infiniteFooter],
+      samples: [
+        infiniteAbout1,
+        infiniteAbout2,
+        infiniteAbout3,
+        infiniteCards,
+        infinitePurchase,
+        infiniteFooter,
+        formUploadMegacine,
+      ],
       stacks: [
         { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
         { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
@@ -36,6 +52,7 @@ export function SectionProjects() {
     {
       title: 'MegaCine',
       cover: megacineHero,
+      samples: [megacineDashboard, megacineResponsive, megacineResponsive2, megacineCard, megacineSerie],
       stacks: [
         { name: 'PHP', color: '#456a96', icon: <SiPhp /> },
         { name: 'HTML', color: '#ee8422', icon: <SiHtml5 /> },
@@ -48,8 +65,8 @@ export function SectionProjects() {
       cover: rocketSpaceHero,
       stacks: [
         { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiHtml5 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiHtml5 /> },
+        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
+        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
       ],
     },
     {
@@ -57,8 +74,8 @@ export function SectionProjects() {
       cover: rocketVPSHero,
       stacks: [
         { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiHtml5 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiHtml5 /> },
+        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
+        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
         { name: 'Bootstrap', color: '#bc2dff', icon: <SiBootstrap /> },
       ],
     },

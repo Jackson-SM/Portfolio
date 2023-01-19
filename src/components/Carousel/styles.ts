@@ -16,7 +16,11 @@ export const CarouselWrapper = styled('div', {
   borderRadius: 5,
   overflow: 'hidden',
 
+  padding: '40px',
+
   scrollBehavior: 'smooth',
+
+  zIndex: '9999999999999',
 
   pointerEvents: 'auto',
 });
@@ -39,16 +43,14 @@ export const CarouselItem = styled('div', {
 });
 
 export const ElementsStyleds = styled('div', {
-  width: '100%',
-  height: '100%',
-
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  position: 'absolute',
+  width: '100%',
+  height: '100%',
 
-  zIndex: 2,
+  position: 'absolute',
 
   padding: '10px',
 });
@@ -75,15 +77,16 @@ export const ButtonNextBack = styled('button', {
 
   pointerEvents: 'auto',
   cursor: 'pointer',
-  zIndex: '22',
 
-  borderRadius: '50%  ',
+  borderRadius: '50%',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 
-  background: 'linear-gradient($background, transparent)',
+  zIndex: 999999999,
+
+  background: 'linear-gradient($primary, transparent)',
 
   outline: 'none',
   border: 'none',

@@ -16,5 +16,9 @@ export const GlobalCss = globalCss({
   body: {
     background: '$background',
     color: '$text',
+
+    '&.scrolled': {
+      overflow: 'hidden',
+    },
   },
 });
