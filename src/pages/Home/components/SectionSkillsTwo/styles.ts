@@ -31,8 +31,6 @@ export const ContentSkillsTop = styled('div', {
   margin: 5,
   borderRadius: 5,
 
-  position: 'relative',
-
   '& svg': {
     position: 'absolute',
     width: 30,
@@ -53,6 +51,8 @@ export const ContentSkillTitle = styled('h1', {
   display: 'flex',
   alignContent: 'center',
   justifyContent: 'center',
+
+  zIndex: '-1',
 });
 
 export const ContentSkillsSection = styled('div', {

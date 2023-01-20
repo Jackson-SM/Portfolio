@@ -1,6 +1,8 @@
 import { styled } from '../../config/stitches.config';
 
 export const StyledTextColor = styled('h1', {
+  zIndex: '-1',
+
   '& strong': {
     color: '$primary',
   },

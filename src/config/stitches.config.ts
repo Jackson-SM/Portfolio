@@ -13,6 +13,7 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
       tertiaryLight: 'hsl(162, 80%, 76%)',
 
       background: 'hsl(0, 0%, 5%)',
+      backgroundLight2: 'hsl(0, 0%, 10%)',
       backgroundLight: 'hsl(0, 0%, 15%)',
 
       backgroundTransparence: 'hsl(0, 0%, 15%, 0.9)',

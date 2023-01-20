@@ -7,6 +7,8 @@ export const TitleSection = styled('h1', {
 
   width: 'max-content',
 
+  zIndex: '-1',
+
   position: 'relative',
 
   overflow: 'hidden',

@@ -32,7 +32,7 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
   const carouselItemsRef = useRef<HTMLDivElement>(null);
 
   return (
-    <CarouselContainer>
+    <CarouselContainer className="carousel">
       <ElementsStyleds>
         <ButtonNextBack
           onClick={(event) => {
@@ -60,16 +60,7 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
           }
         }}
       >
-        <CarouselItems
-          onMouseEnter={(event) => {
-            const body = document.querySelector('body');
-            body?.classList.add('scrolled');
-          }}
-          onMouseLeave={(event) => {
-            const body = document.querySelector('body');
-            body?.classList.remove('scrolled');
-          }}
-        >
+        <CarouselItems>
           {items.map((item, index) => {
             return (
               <CarouselItem

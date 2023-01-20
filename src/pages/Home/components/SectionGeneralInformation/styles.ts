@@ -13,5 +13,5 @@ export const ContentGeneralInformation = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
 
-  background: '$backgroundLight',
+  background: '$backgroundLight2',
 });

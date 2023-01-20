@@ -1,15 +1,21 @@
 import { styled } from '../../config/stitches.config';
 
 export const CarouselContainer = styled('div', {
-  position: 'relative',
+  position: 'sticky',
   borderRadius: '10px',
   overflowX: 'hidden',
-  pointerEvents: 'none',
+  height: '100%',
+
+  '&.no_scroll': {
+    zIndex: '-1',
+  },
 });
 export const CarouselWrapper = styled('div', {
   display: 'flex',
   alignItems: 'start',
   justifyContent: 'start',
+
+  pointerEvents: 'auto',
 
   height: '100%',
 
@@ -19,10 +25,6 @@ export const CarouselWrapper = styled('div', {
   padding: '40px',
 
   scrollBehavior: 'smooth',
-
-  zIndex: '9999999999999',
-
-  pointerEvents: 'auto',
 });
 export const CarouselItems = styled('div', {
   display: 'flex',
@@ -30,12 +32,16 @@ export const CarouselItems = styled('div', {
   alignItems: 'start',
   gap: 5,
 
+  pointerEvents: 'auto',
+
   transition: 'transform 400ms ease-in-out',
 });
 
 export const CarouselItem = styled('div', {
   flex: 'none',
   display: 'flex',
+
+  pointerEvents: 'auto',
 
   '@large': {
     width: '50%',

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Navbar } from '../../components/Navbar';
+import { Footer } from './components/Footer';
 import { Main } from './components/Main';
 import { GeneralInformation } from './components/SectionGeneralInformation';
 import { SectionHero } from './components/SectionHero';
@@ -18,6 +19,7 @@ export function Home() {
         <SectionSkillsTwo />
         <GeneralInformation />
         <SectionProjects />
+        <Footer />
       </Main>
     </>
   );

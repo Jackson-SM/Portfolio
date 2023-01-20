@@ -131,7 +131,6 @@ function SectionSkillsTwo() {
         <ContentSkillsSection>
           <ContentSkillsTop>
             <ContentSkillTitle>Front-end</ContentSkillTitle>
-            <CodeIcon />
           </ContentSkillsTop>
           <ContentSkillsBody>
             {stacksFront.map((stack) => {
@@ -150,7 +149,6 @@ function SectionSkillsTwo() {
         <ContentSkillsSection>
           <ContentSkillsTop>
             <ContentSkillTitle>Back-end</ContentSkillTitle>
-            <BiCodeCurly />
           </ContentSkillsTop>
           <ContentSkillsBody>
             {stacksBack.map((stack) => {
@@ -169,7 +167,6 @@ function SectionSkillsTwo() {
         <ContentSkillsSection>
           <ContentSkillsTop>
             <ContentSkillTitle>Databases</ContentSkillTitle>
-            <FaDatabase />
           </ContentSkillsTop>
           <ContentSkillsBody>
             {stacksDatabases.map((stack) => {

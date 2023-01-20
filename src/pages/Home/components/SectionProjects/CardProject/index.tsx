@@ -48,7 +48,7 @@ export function CardProject({ children, item, ...props }: PropsCardProject) {
             </ItemWrapper>
             {item.samples?.map((sample, index) => {
               return (
-                <ItemWrapper>
+                <ItemWrapper key={index}>
                   <img src={sample} alt="" key={index} />
                 </ItemWrapper>
               );

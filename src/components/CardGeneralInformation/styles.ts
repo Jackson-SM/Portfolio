@@ -7,7 +7,7 @@ export const StyledCardGeneralInformation = styled('div', {
 
   borderRadius: '5px',
 
-  background: '$textDark2',
+  background: '$backgroundLight',
 
   display: 'flex',
   flexDirection: 'column',
