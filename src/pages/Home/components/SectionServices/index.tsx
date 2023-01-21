@@ -21,12 +21,12 @@ export function SectionServices() {
     },
     {
       title: 'Habilidades',
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      text: 'Conto com diversos conhecimento em tecnologias atuais e mais usadas no mercado como: ReactJS, TailwindCSS e Node.JS. Em constante aprendizado e aprimoramento das minhas habilidades atuais trabalhando com projetos pessoais.',
       icon: <StackIcon />,
     },
     {
       title: 'Experiência',
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      text: "Possuo experiência com criação de projetos e aplicações interativas consumindo Api's e criando Landing Pages modernas. Possuo uma grande vontade de aprender e me engajar meus estudos e experiência compartilhando com outros desenvolvedores do mercado.",
       icon: <MagicWandIcon />,
     },
   ];
