@@ -28,7 +28,7 @@ export function SectionHero() {
         >
           <Button
             as="a"
-            href="https://google.com"
+            href="https://drive.google.com/file/d/139c--5d5p0ehW7wH0BbchChWtqN0tGkJ/view?usp=share_link"
             color="primary"
             rounded
             css={{ width: 'max-content', pointerEvents: 'auto' }}
