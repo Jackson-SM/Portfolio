@@ -97,7 +97,7 @@ function SectionSkillsTwo() {
       title: 'Jest Library',
       icon: <SiJest />,
       description:
-        'Atalmente utilizo sempre que possível em minhas aplicações, mantendo uma maior eficácia e facilidade em mantuenções.',
+        'Atualmente utilizo sempre que possível em minhas aplicações, mantendo uma maior eficácia e facilidade em manutenção.',
       color: '#ad63a7',
     },
   ];
@@ -111,7 +111,7 @@ function SectionSkillsTwo() {
     {
       title: 'PostgreSQL',
       icon: <SiPostgresql />,
-      description: 'Banco relacional sendo o meu principal mais utilizado em mes projetos, estando em sua maioria.',
+      description: 'Banco relacional sendo o meu principal mais utilizado em meus projetos, estando em sua maioria.',
       color: '#4f75af',
     },
     {
