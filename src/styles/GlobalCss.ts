@@ -13,10 +13,12 @@ export const GlobalCss = globalCss({
     padding: 0,
     fontFamily: 'Quicksand',
   },
+  html: {
+    scrollBehavior: 'smooth',
+  },
   body: {
     background: '$background',
     color: '$text',
-    scrollBehavior: 'smooth',
 
     '&.scrolled': {
       overflow: 'hidden',
