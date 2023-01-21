@@ -42,10 +42,6 @@ export const CarouselItem = styled('div', {
   display: 'flex',
 
   pointerEvents: 'auto',
-
-  '@large': {
-    width: '50%',
-  },
 });
 
 export const ElementsStyleds = styled('div', {
@@ -104,12 +100,12 @@ export const ButtonNextBack = styled('button', {
   },
 
   '@medium': {
-    height: 25,
-    width: 25,
+    height: 40,
+    width: 40,
 
     '& svg': {
-      width: 15,
-      height: 15,
+      width: 20,
+      height: 20,
     },
   },
 });

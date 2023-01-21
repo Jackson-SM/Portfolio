@@ -2,7 +2,9 @@ import React from 'react';
 import { SiBootstrap, SiCss3, SiHtml5, SiJava, SiJavascript, SiNodedotjs, SiPhp, SiReact } from 'react-icons/si';
 
 import dashboard from '../../../../assets/projects-images/dashboard.png';
+import desafioFooter from '../../../../assets/projects-images/desafio_footer.png';
 import desafioHero from '../../../../assets/projects-images/desafio_hero.png';
+import desafioPlayers from '../../../../assets/projects-images/desafio_players.png';
 import formLogin from '../../../../assets/projects-images/form_login.png';
 import formRegister from '../../../../assets/projects-images/form_register.png';
 import formUploadMegacine from '../../../../assets/projects-images/form_step_upload_megacine.png';
@@ -20,7 +22,10 @@ import megacineResponsive from '../../../../assets/projects-images/megacine_resp
 import megacineResponsive2 from '../../../../assets/projects-images/megacine_responsive2.png';
 import megacineSerie from '../../../../assets/projects-images/page_serie.png';
 import rocketVPSHero from '../../../../assets/projects-images/rocket_vps_hero.png';
+import rocketSpaceFooter from '../../../../assets/projects-images/rocketspace_footer.png';
 import rocketSpaceHero from '../../../../assets/projects-images/rocketspace_hero.png';
+import rocketSpaceMovives from '../../../../assets/projects-images/rocketspace_movies.png';
+import rocketSpacePurchase from '../../../../assets/projects-images/rocketspace_purchases.png';
 import { Carousel, itemsCarousel } from '../../../../components/Carousel';
 import { TextColor } from '../../../../components/TextColor';
 import { TopSections } from '../../../../components/TopSections';
@@ -29,11 +34,24 @@ import { CardProject } from './CardProject';
 import { ContainerSectionProjects, ContentSectionProjects } from './styles';
 
 export function SectionProjects() {
+  const colorsStacks = [
+    {
+      html5: '#ff7a0e',
+      css3: '#2da1ff',
+      nodejs: '#34921c',
+      javascript: '#f1ff2d',
+      php: '#456a96',
+      bootstrap: '#bc2dff',
+      reactjs: '#10c7ff',
+    },
+  ];
   const projects: itemsCarousel[] = [
     {
       title: 'Infinite',
       cover: infiniteHero,
       samples: [
+        formRegister,
+        formLogin,
         infiniteAbout1,
         infiniteAbout2,
         infiniteAbout3,
@@ -43,10 +61,10 @@ export function SectionProjects() {
         formUploadMegacine,
       ],
       stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
-        { name: 'Node.Js', color: '#34921c', icon: <SiNodedotjs /> },
+        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+        { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
+        { name: 'Node.Js', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
       ],
     },
     {
@@ -54,65 +72,49 @@ export function SectionProjects() {
       cover: megacineHero,
       samples: [megacineDashboard, megacineResponsive, megacineResponsive2, megacineCard, megacineSerie],
       stacks: [
-        { name: 'PHP', color: '#456a96', icon: <SiPhp /> },
-        { name: 'HTML', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
+        { name: 'PHP', color: colorsStacks[0].php, icon: <SiPhp /> },
+        { name: 'HTML', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+        { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       ],
     },
     {
       title: 'RocketSpace',
       cover: rocketSpaceHero,
+      samples: [rocketSpaceMovives, rocketSpacePurchase, rocketSpaceFooter],
       stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
+        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+        { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       ],
     },
     {
       title: 'Rocket VPS',
       cover: rocketVPSHero,
       stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
-        { name: 'Bootstrap', color: '#bc2dff', icon: <SiBootstrap /> },
+        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+        { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
+        { name: 'Bootstrap', color: colorsStacks[0].bootstrap, icon: <SiBootstrap /> },
       ],
     },
     {
       title: 'Dashboard',
       cover: dashboard,
       stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
-        { name: 'ReactJS', color: '#10c7ff', icon: <SiReact /> },
+        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+        { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
+        { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
       ],
     },
     {
       title: 'Desafio',
       cover: desafioHero,
+      samples: [desafioPlayers, desafioFooter],
       stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-      ],
-    },
-    {
-      title: 'Form Login',
-      cover: formLogin,
-      stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
-      ],
-    },
-    {
-      title: 'Form Register',
-      cover: formRegister,
-      stacks: [
-        { name: 'HTML5', color: '#ee8422', icon: <SiHtml5 /> },
-        { name: 'CSS3', color: '#2da1ff', icon: <SiCss3 /> },
-        { name: 'Javascript', color: '#f1ff2d', icon: <SiJavascript /> },
+        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
       ],
     },
   ];

@@ -1,8 +1,8 @@
 import { styled } from '../../../../../config/stitches.config';
 
 export const StyledCardProject = styled('div', {
-  width: 350,
-  height: 300,
+  width: 450,
+  height: 350,
   borderRadius: 5,
   padding: 5,
 
@@ -14,16 +14,10 @@ export const StyledCardProject = styled('div', {
   flexDirection: 'column',
 
   margin: '0 auto',
-
-  '@large': {
-    width: '100%',
-  },
 });
 export const CoverProject = styled('div', {
   width: '100%',
   height: '100%',
-
-  maxHeight: '170px',
 
   position: 'relative',
 
@@ -57,8 +51,9 @@ export const WrapperItems = styled('div', {
 
   width: '100%',
 
+  transition: 'all ease 300ms',
+
   borderRadius: 5,
-  overflow: 'hidden',
 
   scrollBehavior: 'smooth',
 
@@ -69,6 +64,12 @@ export const ItemWrapper = styled('div', {
   width: '100%',
   height: '100%',
   flex: 'none',
+
+  '& img': {
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%',
+  },
 });
 
 export const ImagesCoverIndex = styled('div', {
@@ -127,9 +128,13 @@ export const StackUseds = styled('div', {
   flexWrap: 'wrap',
   gap: 15,
 });
+
+export const Description = styled('p', {
+  padding: 0,
+  margin: 0,
+  maxWidth: '100%',
+});
 export const StackUsedSpan = styled('span', {
-  borderRadius: 3,
-  padding: 3,
   fontSize: '$2',
   cursor: 'default',
 
@@ -137,9 +142,13 @@ export const StackUsedSpan = styled('span', {
   alignItems: 'center',
   gap: 5,
 
+  borderRadius: '50%',
+
+  padding: 10,
+
   '& svg': {
-    width: 15,
-    height: 15,
+    width: 18,
+    height: 18,
   },
 });
 export const MoreMedias = styled('button', {
@@ -170,13 +179,12 @@ export const MoreMedias = styled('button', {
 });
 
 export const TolltipContainer = styled('div', {
-  position: 'relative',
+  position: 'absolute',
   width: '100%',
   height: '100%',
 });
 export const TollTip = styled('div', {
   position: 'absolute',
-  width: '300%',
   padding: 10,
 
   opacity: '0',

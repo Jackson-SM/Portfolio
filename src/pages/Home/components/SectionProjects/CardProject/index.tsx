@@ -17,6 +17,11 @@ import {
   WrapperProject,
   WrapperItems,
   ItemWrapper,
+  Description,
+  TolltipContainer,
+  TollTip,
+  TextTolltip,
+  ArrowTolltip,
 } from './styles';
 
 type PropsCardProject = React.ComponentProps<typeof StyledCardProject> & {
@@ -42,7 +47,7 @@ export function CardProject({ children, item, ...props }: PropsCardProject) {
     <StyledCardProject {...props}>
       <CoverProject>
         <WrapperProject>
-          <WrapperItems ref={wrapperItems}>
+          <WrapperItems ref={wrapperItems} css={{ transform: `translateX(-${100 * position}%)` }}>
             <ItemWrapper>
               <img src={item.cover} alt="" />
             </ItemWrapper>
@@ -74,12 +79,14 @@ export function CardProject({ children, item, ...props }: PropsCardProject) {
               return (
                 <StackUsedSpan
                   css={{
-                    background: `linear-gradient(120deg, ${stack.color}, transparent)`,
+                    background: `${stack.color}`,
+                    '& svg': {
+                      color: `$backgroundLight`,
+                    },
                   }}
-                  key={Math.random()}
+                  key={stack.name}
                 >
                   {stack.icon}
-                  {stack.name}
                 </StackUsedSpan>
               );
             })}

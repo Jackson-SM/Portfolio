@@ -5,6 +5,10 @@ export const ContainerLinks = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   gap: 10,
+
+  '@large': {
+    flexDirection: 'row',
+  },
 });
 export const TopContainerLinks = styled('div', {});
 

@@ -12,6 +12,11 @@ export const ContentFooter = styled('div', {
   background: '$backgroundLight2',
   padding: 50,
   borderTopLeftRadius: '130px',
+
+  '@large': {
+    flexDirection: 'column',
+    gap: 40,
+  },
 });
 
 export const TitleContent = styled('span', {
