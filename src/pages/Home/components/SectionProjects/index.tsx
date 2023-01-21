@@ -102,8 +102,6 @@ export function SectionProjects() {
       title: 'Dashboard',
       cover: dashboard,
       stacks: [
-        { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
-        { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
         { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
         { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
       ],
