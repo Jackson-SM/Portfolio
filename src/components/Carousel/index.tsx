@@ -36,14 +36,14 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
       <ElementsStyleds>
         <ButtonNextBack
           onClick={(event) => {
-            carouselItemsRef.current?.scrollBy(-450, 0);
+            carouselItemsRef.current?.scrollBy(carouselItemsRef.current.clientWidth * -1 + 45, 0);
           }}
         >
           <ArrowLeftIcon />
         </ButtonNextBack>
         <ButtonNextBack
           onClick={(event) => {
-            carouselItemsRef.current?.scrollBy(450, 0);
+            carouselItemsRef.current?.scrollBy(carouselItemsRef.current.clientWidth + 45, 0);
           }}
         >
           <ArrowRightIcon />
@@ -56,11 +56,6 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
               <CarouselItem
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
-                css={{
-                  '& img': {
-                    width: `100%`,
-                  },
-                }}
               >
                 <CardProject item={item} />
               </CarouselItem>

@@ -22,8 +22,6 @@ export const CarouselWrapper = styled('div', {
   borderRadius: 5,
   overflow: 'hidden',
 
-  padding: '40px',
-
   scrollBehavior: 'smooth',
 });
 export const CarouselItems = styled('div', {
@@ -40,8 +38,14 @@ export const CarouselItems = styled('div', {
 export const CarouselItem = styled('div', {
   flex: 'none',
   display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 
   pointerEvents: 'auto',
+
+  '@large': {
+    width: '100vw',
+  },
 });
 
 export const ElementsStyleds = styled('div', {

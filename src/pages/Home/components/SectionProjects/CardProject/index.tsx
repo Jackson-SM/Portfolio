@@ -49,12 +49,16 @@ export function CardProject({ children, item, ...props }: PropsCardProject) {
         <WrapperProject>
           <WrapperItems ref={wrapperItems} css={{ transform: `translateX(-${100 * position}%)` }}>
             <ItemWrapper>
-              <img src={item.cover} alt="" />
+              <figure>
+                <img src={item.cover} alt="" />
+              </figure>
             </ItemWrapper>
             {item.samples?.map((sample, index) => {
               return (
                 <ItemWrapper key={index}>
-                  <img src={sample} alt="" key={index} />
+                  <figure>
+                    <img src={sample} alt="" key={index} />
+                  </figure>
                 </ItemWrapper>
               );
             })}

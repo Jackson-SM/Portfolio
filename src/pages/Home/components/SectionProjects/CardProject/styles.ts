@@ -14,6 +14,10 @@ export const StyledCardProject = styled('div', {
   flexDirection: 'column',
 
   margin: '0 auto',
+
+  '@large': {
+    width: '80%',
+  },
 });
 export const CoverProject = styled('div', {
   width: '100%',
@@ -26,9 +30,20 @@ export const CoverProject = styled('div', {
 
   zIndex: '1',
 
+  '& figure': {
+    width: '100%',
+    height: '100%',
+  },
+
   '& img': {
     height: '100%',
     width: '100%',
+  },
+
+  '@large': {
+    '& img': {
+      objectFit: 'cover',
+    },
   },
 });
 
@@ -66,7 +81,6 @@ export const ItemWrapper = styled('div', {
   flex: 'none',
 
   '& img': {
-    objectFit: 'cover',
     width: '100%',
     height: '100%',
   },
