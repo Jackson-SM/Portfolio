@@ -49,17 +49,7 @@ export function Carousel({ children, items, scrolled }: CarouselProps) {
           <ArrowRightIcon />
         </ButtonNextBack>
       </ElementsStyleds>
-      <CarouselWrapper
-        ref={carouselItemsRef}
-        onWheel={(event) => {
-          if (event.deltaY > 0) {
-            carouselItemsRef.current?.scrollBy(450, 0);
-          }
-          if (event.deltaY < 0) {
-            carouselItemsRef.current?.scrollBy(-450, 0);
-          }
-        }}
-      >
+      <CarouselWrapper ref={carouselItemsRef}>
         <CarouselItems>
           {items.map((item, index) => {
             return (
