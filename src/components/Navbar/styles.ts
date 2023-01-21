@@ -66,3 +66,13 @@ export const StyledNavbar = styled('nav', {
     },
   },
 });
+
+export const LogoNavbar = styled('span', {
+  fontSize: '24px',
+
+  '& strong': {
+    textDecoration: 'underline',
+
+    color: '$primaryLight',
+  },
+});

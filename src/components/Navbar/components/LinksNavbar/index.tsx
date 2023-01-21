@@ -15,12 +15,11 @@ export function LinksNavbar({ toggleMinimizedNavbar, ...props }: PropsLinksNavba
       <ButtonOpenOrClosedNavbar onClick={toggleMinimizedNavbar}>
         <Cross1Icon />
       </ButtonOpenOrClosedNavbar>
-      <LinkNavbar to="#about">About</LinkNavbar>
-      <LinkNavbar to="#skills">Skills</LinkNavbar>
-      <LinkNavbar to="#objective">Objective</LinkNavbar>
-      <LinkNavbar to="#networks">Networks</LinkNavbar>
-      <LinkNavbar to="#contact">Contact</LinkNavbar>
-      <LinkNavbar to="#services">Services</LinkNavbar>
+      <LinkNavbar href="#aboutme">Sobre mim</LinkNavbar>
+      <LinkNavbar href="#services">Serviços</LinkNavbar>
+      <LinkNavbar href="#skills">Habilidades</LinkNavbar>
+      <LinkNavbar href="#projects">Projetos</LinkNavbar>
+      <LinkNavbar href="#contact">Contatos</LinkNavbar>
     </ContainerLinks>
   );
 }

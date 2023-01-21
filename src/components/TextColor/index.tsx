@@ -6,5 +6,9 @@ type PropsTextColor = React.ComponentProps<typeof StyledTextColor> & {
   as?: React.ElementType;
 };
 export function TextColor({ children, ...props }: PropsTextColor) {
-  return <StyledTextColor {...props}>{children}</StyledTextColor>;
+  return (
+    <StyledTextColor {...props} className="textcolor">
+      {children}
+    </StyledTextColor>
+  );
 }

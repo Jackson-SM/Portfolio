@@ -1,11 +1,11 @@
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import logo from '../../assets/development_2.png';
 import { Box } from '../Box';
 import { TextColor } from '../TextColor';
 import { LinksNavbar } from './components/LinksNavbar';
-import { ButtonOpenOrClosedNavbar, StyledLogoImage, StyledNavbar } from './styles';
+import { ButtonOpenOrClosedNavbar, LogoNavbar, StyledLogoImage, StyledNavbar } from './styles';
 
 export function Navbar() {
   const [minimizedNavbar, setMinimizedNavbar] = useState<boolean>(false);
@@ -19,9 +19,9 @@ export function Navbar() {
     <StyledNavbar>
       <Box css={{ alignItems: 'center', gap: 5 }}>
         <StyledLogoImage src={logo} />
-        <TextColor>
+        <LogoNavbar>
           Jack<strong>son</strong>
-        </TextColor>
+        </LogoNavbar>
       </Box>
       <LinksNavbar OpenMinimizedNavbar={minimizedNavbar} toggleMinimizedNavbar={toggleMinimizedNavbar} />
       <ButtonOpenOrClosedNavbar onClick={toggleMinimizedNavbar}>

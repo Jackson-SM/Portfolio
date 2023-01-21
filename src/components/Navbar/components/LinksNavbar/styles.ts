@@ -27,7 +27,7 @@ export const ContainerLinks = styled('div', {
   },
 });
 
-export const LinkNavbar = styled(Link, {
+export const LinkNavbar = styled('a', {
   textDecoration: 'none',
   fontSize: '$2',
   color: '$text',

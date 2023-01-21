@@ -1,6 +1,12 @@
 import { styled } from '../../../../../config/stitches.config';
 
 export const ContainerContacts = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: 30,
+});
+export const ContentContacts = styled('div', {
   background: '$backgroundLight',
   borderRadius: 5,
   padding: 20,
@@ -16,13 +22,13 @@ export const CardContact = styled('div', {
 });
 export const IconContacts = styled('div', {
   '& svg': {
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   },
 });
-export const ContentContact = styled('div', {});
+export const ContentCardContact = styled('div', {});
 export const TitleContacts = styled('span', {
-  fontSize: '18px',
+  fontSize: '16px',
 });
 export const StringContact = styled('p', {
   fontSize: '13px',

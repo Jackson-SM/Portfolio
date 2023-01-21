@@ -1,7 +1,8 @@
-import { DiscordLogoIcon, GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import { DiscordLogoIcon, GitHubLogoIcon, GlobeIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import React from 'react';
 
-import { ContainerNetworks, IconNetwork, NetworkCard, TitleNetwork } from './styles';
+import { TitleContent, TitleIcon } from '../styles';
+import { ContainerNetworks, ContentNetworks, IconNetwork, NetworkCard, TitleNetwork } from './styles';
 
 export function Networks() {
   const networks = [
@@ -12,14 +13,22 @@ export function Networks() {
 
   return (
     <ContainerNetworks>
-      {networks.map((network) => {
-        return (
-          <NetworkCard key={network.name} href={network.link}>
-            <IconNetwork>{network.icon}</IconNetwork>
-            <TitleNetwork>{network.name}</TitleNetwork>
-          </NetworkCard>
-        );
-      })}
+      <TitleContent>
+        <TitleIcon>
+          <GlobeIcon />
+        </TitleIcon>
+        Redes
+      </TitleContent>
+      <ContentNetworks>
+        {networks.map((network) => {
+          return (
+            <NetworkCard key={network.name} href={network.link}>
+              <IconNetwork className="icon_network">{network.icon}</IconNetwork>
+              <TitleNetwork>{network.name}</TitleNetwork>
+            </NetworkCard>
+          );
+        })}
+      </ContentNetworks>
     </ContainerNetworks>
   );
 }

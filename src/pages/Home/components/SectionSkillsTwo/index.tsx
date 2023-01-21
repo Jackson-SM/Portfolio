@@ -123,7 +123,7 @@ function SectionSkillsTwo() {
   ];
 
   return (
-    <ContainerSectionTwo>
+    <ContainerSectionTwo id="skills">
       <TopSections>
         <TitleSection color="primary">Minhas Habilidades</TitleSection>
       </TopSections>

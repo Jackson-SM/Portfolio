@@ -1,5 +1,5 @@
+import { TopSections } from '../../../../components/TopSections';
 import { styled } from '../../../../config/stitches.config';
-import { TopSection } from '../SectionAboutMe/styles';
 
 export const ContainerSectionSkills = styled('div', {
   display: 'flex',
@@ -7,7 +7,7 @@ export const ContainerSectionSkills = styled('div', {
   gap: 20,
 });
 
-export const TopContainerSkills = styled(TopSection, {
+export const TopContainerSkills = styled(TopSections, {
   display: 'flex',
   justifyContent: 'space-between',
 });

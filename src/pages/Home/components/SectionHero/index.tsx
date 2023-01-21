@@ -8,7 +8,7 @@ import { ContainerApresentation, ContainerHero, ContainerInfo, ContainerPersonIn
 
 export function SectionHero() {
   return (
-    <ContainerHero>
+    <ContainerHero id="aboutme">
       <ContainerApresentation>
         <TextColor size="large_xx">
           Hi, i'm <strong>Web Developer</strong>.
@@ -27,9 +27,6 @@ export function SectionHero() {
         >
           <Button color="primary" rounded css={{ width: 'max-content' }}>
             Download CV
-          </Button>
-          <Button color="primary" rounded css={{ width: 'max-content' }}>
-            About Me
           </Button>
         </Box>
       </ContainerApresentation>

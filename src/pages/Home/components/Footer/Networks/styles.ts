@@ -3,8 +3,9 @@ import { styled } from '../../../../../config/stitches.config';
 export const ContainerNetworks = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
 
-  gap: 10,
+  gap: 30,
 });
 
 export const NetworkCard = styled('a', {
@@ -19,17 +20,40 @@ export const NetworkCard = styled('a', {
   textDecoration: 'none',
   color: 'white',
 
-  background: 'linear-gradient(to left, $primary, transparent 90%)',
+  background: 'linear-gradient(to left, #bfbfbf, transparent 90%)',
+
+  transition: 'background ease 300ms',
+
+  '&:hover': {
+    background: 'linear-gradient(to left, $primary, transparent 90%)',
+  },
+
+  '&:hover .icon_network': {
+    background: '$primary',
+
+    '& svg': {
+      color: 'white',
+    },
+  },
+});
+
+export const ContentNetworks = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+
+  gap: 10,
 });
 
 export const TitleNetwork = styled('span', {});
 export const IconNetwork = styled('div', {
   padding: 5,
 
-  background: '$primary',
+  background: '#bfbfbf',
 
   display: 'flex',
   alignItems: 'center',
+
+  transition: 'all ease 130ms',
 
   borderRadius: '10px',
 
@@ -37,6 +61,6 @@ export const IconNetwork = styled('div', {
     width: 20,
     height: 20,
 
-    color: 'white',
+    color: '$backgroundLight2',
   },
 });

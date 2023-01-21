@@ -118,7 +118,7 @@ export function SectionProjects() {
   ];
 
   return (
-    <ContainerSectionProjects>
+    <ContainerSectionProjects id="projects">
       <TopSections>
         <TitleSection color="primary">Meus Projetos</TitleSection>
       </TopSections>

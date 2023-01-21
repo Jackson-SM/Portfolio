@@ -32,9 +32,9 @@ export function SectionServices() {
   ];
 
   return (
-    <ContainerSectionAboutMe>
+    <ContainerSectionAboutMe id="services">
       <TopSections>
-        <TitleSection color="primary">Sobre Mim</TitleSection>
+        <TitleSection color="primary">Meus Serviços</TitleSection>
       </TopSections>
       <ContainerSkillsIndividualCards>
         {contentSkillIndividual.map((skill) => {
