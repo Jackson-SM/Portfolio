@@ -14,6 +14,8 @@ export function Navbar() {
     setMinimizedNavbar((minimizedValueBefore) => !minimizedValueBefore);
     const carousel = document.querySelector('.carousel');
     carousel?.classList.toggle('no_scroll');
+    const buttonCv = document.querySelector('.button_cv');
+    buttonCv?.classList.toggle('nav_minified');
   };
   return (
     <StyledNavbar>

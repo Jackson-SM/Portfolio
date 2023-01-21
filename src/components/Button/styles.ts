@@ -11,7 +11,9 @@ export const StyledButton = styled('button', {
 
   outline: 'none',
 
-  zIndex: '-1',
+  '&.nav_minified': {
+    zIndex: '-1',
+  },
 
   fontSize: '17px',
   padding: 10,

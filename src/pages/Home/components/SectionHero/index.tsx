@@ -22,10 +22,17 @@ export function SectionHero() {
         <Box
           css={{
             gap: 10,
+            pointerEvents: 'auto',
             '@large': { justifyContent: 'center' },
           }}
         >
-          <Button color="primary" rounded css={{ width: 'max-content' }}>
+          <Button
+            as="a"
+            href="https://google.com"
+            color="primary"
+            rounded
+            css={{ width: 'max-content', pointerEvents: 'auto' }}
+          >
             Download CV
           </Button>
         </Box>

@@ -8,5 +8,9 @@ type ButtonProps = React.ComponentProps<typeof StyledButton> & {
 };
 
 export function Button({ children, ...props }: ButtonProps) {
-  return <StyledButton {...props}>{children}</StyledButton>;
+  return (
+    <StyledButton {...props} className="button_cv">
+      {children}
+    </StyledButton>
+  );
 }

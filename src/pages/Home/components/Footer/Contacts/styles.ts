@@ -5,10 +5,6 @@ export const ContainerContacts = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   gap: 30,
-
-  '@large': {
-    flexDirection: 'row',
-  },
 });
 export const ContentContacts = styled('div', {
   background: '$backgroundLight',

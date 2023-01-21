@@ -6,10 +6,6 @@ export const ContainerNetworks = styled('div', {
   alignItems: 'center',
 
   gap: 30,
-
-  '@large': {
-    flexDirection: 'row',
-  },
 });
 
 export const NetworkCard = styled('a', {
