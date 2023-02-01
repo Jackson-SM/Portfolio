@@ -11,7 +11,7 @@ export function SectionHero() {
     <ContainerHero id="aboutme">
       <ContainerApresentation>
         <TextColor size="large_xx">
-          Hi, i'm <strong>Web Developer</strong>.
+          Ola, Eu sou um <strong>Desenvolvedor Web</strong>.
         </TextColor>
         <TextColor size="small" as="span" css={{ color: '$textDark' }}>
           Sou um desenvolvedor web e sempre fui apaixonado em TI. Comecei a programar com 15 anos utilizando php e
