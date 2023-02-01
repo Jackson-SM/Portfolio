@@ -8,10 +8,13 @@ import { SectionHero } from './components/SectionHero';
 import { SectionProjects } from './components/SectionProjects';
 import { SectionServices } from './components/SectionServices';
 import SectionSkillsTwo from './components/SectionSkillsTwo';
+import { HomeContainer } from './styles';
 
-export function Home() {
+type HomeProps = React.ComponentProps<typeof HomeContainer>;
+
+export function Home(props: HomeProps) {
   return (
-    <>
+    <HomeContainer {...props}>
       <Navbar />
       <Main>
         <SectionHero />
@@ -21,6 +24,6 @@ export function Home() {
         <SectionProjects />
         <Footer />
       </Main>
-    </>
+    </HomeContainer>
   );
 }

@@ -30,20 +30,10 @@ export const CoverProject = styled('div', {
 
   zIndex: '1',
 
-  '& figure': {
-    width: '100%',
-    height: '100%',
-  },
-
   '& img': {
     height: '100%',
     width: '100%',
-  },
-
-  '@large': {
-    '& img': {
-      objectFit: 'cover',
-    },
+    objectFit: 'cover',
   },
 });
 
@@ -79,11 +69,6 @@ export const ItemWrapper = styled('div', {
   width: '100%',
   height: '100%',
   flex: 'none',
-
-  '& img': {
-    width: '100%',
-    height: '100%',
-  },
 });
 
 export const ImagesCoverIndex = styled('div', {
