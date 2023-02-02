@@ -1,26 +1,38 @@
 import React, { createContext, useState, useEffect } from 'react';
 
+import { blueTheme } from '../styles/themes/blue';
+import { purpleTheme } from '../styles/themes/purple';
+import { redTheme } from '../styles/themes/red';
+
 type ThemeContextProps = {
-  theme: string;
-  changeTheme(themeName: string): void;
+  theme: typeof redTheme;
+  changeTheme(themeName: typeof redTheme): void;
 };
 
 export const ThemeContext = createContext({} as ThemeContextProps);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<string>(() => {
+  const [theme, setTheme] = useState<typeof redTheme>(() => {
     const issetThemeJSON = localStorage.getItem('theme-portfolio');
 
-    if (issetThemeJSON) {
-      return issetThemeJSON;
+    if (issetThemeJSON === 'red-theme') {
+      return redTheme;
+    }
+    if (issetThemeJSON === 'blue-theme') {
+      return blueTheme;
+    }
+    if (issetThemeJSON === 'purple-theme') {
+      return purpleTheme;
     }
 
     localStorage.setItem('theme-portfolio', 'red-theme');
-    return 'red-theme';
+    return redTheme;
   });
 
-  const changeTheme = (themeName: string) => {
+  const changeTheme = (themeName: typeof redTheme) => {
     setTheme(themeName);
+
+    localStorage.setItem('theme-portfolio', themeName.className);
   };
 
   console.log(theme);

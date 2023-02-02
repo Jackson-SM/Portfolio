@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import logo from '../../assets/development_2.png';
 import { Box } from '../Box';
 import { TextColor } from '../TextColor';
+import { Themes } from '../Themes';
 import { LinksNavbar } from './components/LinksNavbar';
 import { ButtonOpenOrClosedNavbar, LogoNavbar, StyledLogoImage, StyledNavbar } from './styles';
 
