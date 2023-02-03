@@ -4,8 +4,9 @@ export const StyledSkillIndividualCard = styled('div', {
   /*   linearGradient: 'to right,transparent 90%, $primary',
   border: '2px solid $backgroundLight'
   */
-  maxWidth: '400px',
-  borderRadius: 5,
+  position: 'relative',
+
+  maxWidth: '600px',
   display: 'flex',
   flexDirection: 'column',
   gap: 10,
@@ -16,9 +17,24 @@ export const StyledSkillIndividualCard = styled('div', {
 
   fontSize: 15,
 
+  padding: 10,
+
+  border: ' 2px solid transparent',
+  borderRadius: 10,
+  background: 'linear-gradient(to right, $background, $background),linear-gradient(to right, $primary , transparent)',
+  backgroundClip: 'padding-box, border-box',
+  backgroundOrigin: 'padding-box, border-box',
+
+  transition: 'all ease 130ms',
+
   '@large': {
     margin: '0',
     maxWidth: '100%',
+  },
+
+  '&:hover': {
+    boxShadow: '0 0 10px 10px $background',
+    transform: 'scale(1.04)',
   },
 });
 

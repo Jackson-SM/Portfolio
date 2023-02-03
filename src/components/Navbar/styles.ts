@@ -44,15 +44,17 @@ export const StyledNavbar = styled('nav', {
 
   background: '$backgroundLight',
 
+  position: 'relative',
+
   '@medium': {
     [`& ${LinksNavbar}`]: {
-      position: 'fixed',
+      position: 'absolute',
 
-      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      flexDirection: 'row',
 
-      background: 'rgba(33, 33, 33, 0.92)',
+      background: '$background',
       width: '100%',
 
       top: 0,
