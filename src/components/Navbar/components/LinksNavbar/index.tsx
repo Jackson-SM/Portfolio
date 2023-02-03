@@ -1,6 +1,5 @@
 import { Cross1Icon } from '@radix-ui/react-icons';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { ButtonOpenOrClosedNavbar } from '../../styles';
 import { ContainerLinks, LinkNavbar } from './styles';
