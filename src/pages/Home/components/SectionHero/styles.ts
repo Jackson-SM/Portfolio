@@ -11,10 +11,13 @@ export const ContainerHero = styled('div', {
 
   height: 'calc(100vh - 60px)',
 
+  background: 'radial-gradient(circle at 20%,$primary, transparent, transparent, transparent, transparent)',
+
   '@large': {
     flexDirection: 'column-reverse',
     gap: 50,
     height: 'auto',
+    background: 'radial-gradient(circle at 50% 20%,$primary, transparent, transparent, transparent)',
   },
 });
 

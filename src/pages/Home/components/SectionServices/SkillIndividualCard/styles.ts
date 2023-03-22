@@ -19,7 +19,7 @@ export const StyledSkillIndividualCard = styled('div', {
 
   padding: 10,
 
-  border: ' 2px solid transparent',
+  border: ' 1px solid transparent',
   borderRadius: 10,
   background: 'linear-gradient(to right, $background, $background),linear-gradient(to right, $primary , transparent)',
   backgroundClip: 'padding-box, border-box',
