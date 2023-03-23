@@ -1,70 +1,98 @@
 import React from 'react';
 
+import Javascript from '../../../../assets/icons_stacks/logo-javascript.svg';
+import NestJs from '../../../../assets/icons_stacks/nestjs.svg';
+import NodeJs from '../../../../assets/icons_stacks/nodejs-1.svg';
+import react from '../../../../assets/icons_stacks/react-2.svg';
+import Typescript from '../../../../assets/icons_stacks/typescript.svg';
+import VsCode from '../../../../assets/icons_stacks/visual-studio-code-1.svg';
 import photo from '../../../../assets/photo.jpeg';
 import { Box } from '../../../../components/Box';
 import { Button } from '../../../../components/Button';
 import { TextColor } from '../../../../components/TextColor';
-import { ContainerApresentation, ContainerHero, ContainerInfo, ContainerPersonInfo, StyledPhoto } from './styles';
+import {
+  IconStack,
+  ContainerApresentation,
+  ContainerHero,
+  ContainerInfo,
+  ContainerPersonInfo,
+  ContainerStacks,
+  ContentHero,
+  StyledPhoto,
+} from './styles';
 
 export function SectionHero() {
+  const stacksImages = [Javascript, NodeJs, NestJs, react, Typescript, VsCode];
+
   return (
     <ContainerHero id="aboutme">
-      <ContainerApresentation>
-        <TextColor size="large_xx">
-          Olá, Eu sou um <strong>Desenvolvedor Web</strong>.
-        </TextColor>
-        <TextColor size="small" as="span" css={{ color: '$textDark' }}>
-          Sou um desenvolvedor web e sempre fui apaixonado em TI. Comecei a programar com 15 anos utilizando php e
-          python, hoje utilizo diversas tecnologias e busco <strong>avançar</strong> meus conhecimentos na área cada vez
-          mais. Sou um desenvolvedor com poucas experiências profissionais porém uma grande{' '}
-          <strong>produtividade</strong> e acostumado a <strong>trabalhar em equipe</strong>.
-        </TextColor>
-        <Box
-          css={{
-            gap: 10,
-            pointerEvents: 'auto',
-            '@large': { justifyContent: 'center' },
-          }}
-        >
-          <Button
-            as="a"
-            href="https://drive.google.com/file/d/139c--5d5p0ehW7wH0BbchChWtqN0tGkJ/view?usp=share_link"
-            color="primary"
-            rounded
-            css={{ width: 'max-content', pointerEvents: 'auto' }}
-          >
-            Download CV
-          </Button>
-        </Box>
-      </ContainerApresentation>
-
-      <ContainerInfo>
-        <ContainerPersonInfo>
+      <ContentHero>
+        <ContainerApresentation>
+          <TextColor size="large_xx">
+            Olá, Eu sou um <strong>Desenvolvedor Web</strong>.
+          </TextColor>
+          <TextColor size="small" as="span" css={{ color: '$textDark' }}>
+            Sou um desenvolvedor web e sempre fui apaixonado em TI. Comecei a programar com 15 anos utilizando php e
+            python, hoje utilizo diversas tecnologias e busco <strong>avançar</strong> meus conhecimentos na área cada
+            vez mais. Sou um desenvolvedor com poucas experiências profissionais porém uma grande{' '}
+            <strong>produtividade</strong> e acostumado a <strong>trabalhar em equipe</strong>.
+          </TextColor>
           <Box
             css={{
-              padding: 5,
-              borderRadius: '100%',
-              linearGradient: '245deg,$primary,transparent',
+              gap: 10,
+              pointerEvents: 'auto',
+              '@large': { justifyContent: 'center' },
             }}
           >
-            <StyledPhoto src={photo} />
+            <Button
+              as="a"
+              href="https://drive.google.com/file/d/139c--5d5p0ehW7wH0BbchChWtqN0tGkJ/view?usp=share_link"
+              color="primary"
+              rounded
+              css={{ width: 'max-content', pointerEvents: 'auto' }}
+            >
+              Download CV
+            </Button>
           </Box>
-          <TextColor
-            size="medium"
-            css={{
-              marginTop: '20px',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              linearGradient: 'to right,$primary 50%,$primaryLight',
-            }}
-          >
-            Jackson Magalhães
-          </TextColor>
-          <TextColor size="small_low" as="span">
-            <strong>Full-Stack</strong> Developer
-          </TextColor>
-        </ContainerPersonInfo>
-      </ContainerInfo>
+        </ContainerApresentation>
+
+        <ContainerInfo>
+          <ContainerPersonInfo>
+            <Box
+              css={{
+                padding: 5,
+                borderRadius: '100%',
+                linearGradient: '245deg,$primary,transparent',
+              }}
+            >
+              <StyledPhoto src={photo} />
+            </Box>
+            <TextColor
+              size="medium"
+              css={{
+                marginTop: '20px',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                linearGradient: 'to right,$primary 50%,$primaryLight',
+              }}
+            >
+              Jackson Magalhães
+            </TextColor>
+            <TextColor size="small_low" as="span">
+              <strong>Full-Stack</strong> Developer
+            </TextColor>
+          </ContainerPersonInfo>
+        </ContainerInfo>
+      </ContentHero>
+      <ContainerStacks>
+        {stacksImages.map((img) => {
+          return (
+            <IconStack>
+              <img src={img} alt="" />
+            </IconStack>
+          );
+        })}
+      </ContainerStacks>
     </ContainerHero>
   );
 }

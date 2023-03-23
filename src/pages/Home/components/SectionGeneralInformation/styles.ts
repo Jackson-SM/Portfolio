@@ -1,6 +1,6 @@
 import { styled } from '../../../../config/stitches.config';
 
-export const ContainerGeneralInformation = styled('div', {});
+export const ContainerGeneralInformation = styled('section', {});
 
 export const ContentGeneralInformation = styled('div', {
   padding: 40,

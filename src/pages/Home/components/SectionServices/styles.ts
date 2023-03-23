@@ -1,6 +1,6 @@
 import { styled } from '../../../../config/stitches.config';
 
-export const ContainerSectionAboutMe = styled('div', {
+export const ContainerSectionAboutMe = styled('section', {
   padding: '10px 40px 10px 40px',
   display: 'flex',
   flexDirection: 'column',
