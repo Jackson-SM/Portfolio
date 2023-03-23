@@ -19,6 +19,7 @@ import {
   ContainerStacks,
   ContentHero,
   StyledPhoto,
+  showIcon,
 } from './styles';
 
 export function SectionHero() {
@@ -85,9 +86,9 @@ export function SectionHero() {
         </ContainerInfo>
       </ContentHero>
       <ContainerStacks>
-        {stacksImages.map((img) => {
+        {stacksImages.map((img, index) => {
           return (
-            <IconStack>
+            <IconStack style={{ animation: `${showIcon} ${index}s` }}>
               <img src={img} alt="" />
             </IconStack>
           );

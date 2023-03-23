@@ -109,12 +109,16 @@ export const ContainerStacks = styled('div', {
   display: 'flex',
   gap: 30,
   justifyContent: 'center',
+
+  '@large': {
+    gap: 10,
+  },
 });
 
-const showIcon = keyframes({
+export const showIcon = keyframes({
   '0%': {
     opacity: 0,
-    transform: 'translateX(20px)',
+    transform: 'translateX(40px)',
   },
   '100%': {
     opacity: 1,
@@ -127,8 +131,6 @@ export const IconStack = styled('div', {
   display: 'flex',
   borderRadius: '50%',
 
-  animation: `${showIcon} 1s`,
-
   transition: 'background ease 200ms',
 
   '&:hover': {
@@ -138,5 +140,10 @@ export const IconStack = styled('div', {
   '& img': {
     width: 40,
     height: 40,
+
+    '@large': {
+      width: 30,
+      height: 30,
+    },
   },
 });
