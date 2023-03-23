@@ -88,7 +88,14 @@ export function SectionHero() {
       <ContainerStacks>
         {stacksImages.map((img, index) => {
           return (
-            <IconStack style={{ animation: `${showIcon} ${index}s` }}>
+            <IconStack
+              style={{
+                animation: `${showIcon} ${index + 1}s ease-in-out`,
+                animationDelay: `${(index / 2 + 1) / 2}s`,
+                animationFillMode: 'forwards',
+              }}
+              key={img.toString()}
+            >
               <img src={img} alt="" />
             </IconStack>
           );

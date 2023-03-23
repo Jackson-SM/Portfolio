@@ -131,6 +131,9 @@ export const IconStack = styled('div', {
   display: 'flex',
   borderRadius: '50%',
 
+  opacity: 0,
+  transform: 'translateX(40px)',
+
   transition: 'background ease 200ms',
 
   '&:hover': {

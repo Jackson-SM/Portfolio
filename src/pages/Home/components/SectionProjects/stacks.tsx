@@ -20,12 +20,7 @@ import megacineHero from '../../../../assets/projects-images/megacine_hero.png';
 import megacineResponsive from '../../../../assets/projects-images/megacine_responsive.png';
 import megacineResponsive2 from '../../../../assets/projects-images/megacine_responsive2.png';
 import megacineSerie from '../../../../assets/projects-images/page_serie.png';
-import rocketVPSHero from '../../../../assets/projects-images/rocket_vps_hero.png';
-import rocketSpaceFooter from '../../../../assets/projects-images/rocketspace_footer.png';
-import rocketSpaceHero from '../../../../assets/projects-images/rocketspace_hero.png';
-import rocketSpaceMovives from '../../../../assets/projects-images/rocketspace_movies.png';
-import rocketSpacePurchase from '../../../../assets/projects-images/rocketspace_purchases.png';
-import { itemsCarousel } from '../../../../components/Carousel';
+import { itemsProjects } from './CardProject';
 
 export const colorsStacks = [
   {
@@ -38,7 +33,7 @@ export const colorsStacks = [
     reactjs: '#10c7ff',
   },
 ];
-export const projects: itemsCarousel[] = [
+export const projects: itemsProjects[] = [
   {
     title: 'Infinite',
     cover: infiniteHero,
@@ -59,9 +54,10 @@ export const projects: itemsCarousel[] = [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       { name: 'Node.Js', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
     ],
+    link: 'https://github.com/Jackson-SM/landingPage-Pratic',
   },
   {
-    title: 'MegaCine',
+    title: 'DevCine',
     cover: megacineHero,
     samples: [megacineDashboard, megacineResponsive, megacineResponsive2, megacineCard, megacineSerie],
     stacks: [
@@ -70,26 +66,7 @@ export const projects: itemsCarousel[] = [
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
     ],
-  },
-  {
-    title: 'RocketSpace',
-    cover: rocketSpaceHero,
-    samples: [rocketSpaceMovives, rocketSpacePurchase, rocketSpaceFooter],
-    stacks: [
-      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
-      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
-      { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
-    ],
-  },
-  {
-    title: 'Rocket VPS',
-    cover: rocketVPSHero,
-    stacks: [
-      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
-      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
-      { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
-      { name: 'Bootstrap', color: colorsStacks[0].bootstrap, icon: <SiBootstrap /> },
-    ],
+    link: 'https://github.com/Jackson-SM/devcine',
   },
   {
     title: 'Dashboard',
@@ -98,6 +75,7 @@ export const projects: itemsCarousel[] = [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
     ],
+    link: 'dashlearn.netlify.app/',
   },
   {
     title: 'Desafio',
@@ -107,5 +85,16 @@ export const projects: itemsCarousel[] = [
       { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
     ],
+    link: 'https://github.com/Jackson-SM/landingPage-Pratic',
+  },
+  {
+    title: 'Navbar Responsive',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [
+      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+    ],
+    link: 'https://jackson-sm.github.io/navbar-responsive/',
   },
 ];

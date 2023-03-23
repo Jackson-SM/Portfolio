@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Carousel, itemsCarousel } from '../../../../components/Carousel';
 import { TextColor } from '../../../../components/TextColor';
 import { TopSections } from '../../../../components/TopSections';
 import { TitleSection } from '../TitleSection';
+import { CardProject } from './CardProject';
 import { projects } from './stacks';
 import { ContainerSectionProjects, ContentSectionProjects } from './styles';
 
@@ -14,7 +14,9 @@ export function SectionProjects() {
         <TitleSection color="primary">Meus Projetos</TitleSection>
       </TopSections>
       <ContentSectionProjects>
-        <h1>Manutenção</h1>
+        {projects.map((project) => {
+          return <CardProject project={project} key={project.title} />;
+        })}
       </ContentSectionProjects>
     </ContainerSectionProjects>
   );
