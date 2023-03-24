@@ -47,6 +47,7 @@ export function SectionHero() {
           >
             <Button
               as="a"
+              target="__blank"
               href="https://drive.google.com/file/d/1acA623j8v4FNq5jsJqrTmHaMXIxYLwSl/view?usp=share_link"
               color="primary"
               rounded
@@ -66,7 +67,7 @@ export function SectionHero() {
                 linearGradient: '245deg,$primary,transparent',
               }}
             >
-              <StyledPhoto src={photo} />
+              <StyledPhoto src={photo} css={{}} />
             </Box>
             <TextColor
               size="medium"
