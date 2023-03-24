@@ -75,7 +75,7 @@ export const projects: itemsProjects[] = [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
     ],
-    link: 'dashlearn.netlify.app/',
+    link: 'https://dashlearn.netlify.app/',
   },
   {
     title: 'Desafio',
