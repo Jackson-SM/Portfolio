@@ -28,7 +28,6 @@ export function Home(props: HomeProps) {
         <GeneralInformation />
         <SectionProjects />
         <Footer />
-        <Themes />
       </Main>
     </HomeContainer>
   );
