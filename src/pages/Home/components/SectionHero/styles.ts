@@ -10,13 +10,14 @@ export const ContainerHero = styled('section', {
   height: 'calc(100vh - 60px)',
 
   background:
-    'radial-gradient(circle at 18% 30%,$primary, transparent, transparent, transparent, transparent, transparent)',
+    'radial-gradient(circle at 18% 30%,$primary, transparent, transparent, transparent, transparent, transparent, transparent, transparent)',
 
   '@large': {
     flexDirection: 'column',
     gap: 50,
     height: 'auto',
-    background: 'radial-gradient(circle at 50% 20%,$primary, transparent, transparent, transparent)',
+    background:
+      'radial-gradient(circle at 50% 20%,$primary, transparent, transparent, transparent, transparent, transparent)',
   },
 });
 
@@ -29,7 +30,6 @@ export const ContentHero = styled('div', {
 
   '@large': {
     flexDirection: 'column-reverse',
-    background: 'radial-gradient(circle at 50% 20%,$primary, transparent, transparent, transparent)',
   },
 });
 

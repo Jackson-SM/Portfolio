@@ -4,6 +4,7 @@ import { StyledButton } from './styles';
 
 type ButtonProps = React.ComponentProps<typeof StyledButton> & {
   as?: React.ElementType;
+  target?: string;
   href?: string;
 };
 

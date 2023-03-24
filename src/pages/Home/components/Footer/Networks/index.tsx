@@ -22,7 +22,7 @@ export function Networks() {
       <ContentNetworks>
         {networks.map((network) => {
           return (
-            <NetworkCard key={network.name} href={network.link}>
+            <NetworkCard key={network.name} href={network.link} target="__blank">
               <IconNetwork className="icon_network">{network.icon}</IconNetwork>
               <TitleNetwork>{network.name}</TitleNetwork>
             </NetworkCard>
