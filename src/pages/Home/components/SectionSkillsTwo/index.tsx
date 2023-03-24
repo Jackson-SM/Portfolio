@@ -18,8 +18,6 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 
-import { Carousel, itemsCarousel } from '../../../../components/Carousel';
-import { CarouselItem } from '../../../../components/Carousel/styles';
 import { TopSections } from '../../../../components/TopSections';
 import { TitleSection } from '../TitleSection';
 import { CardSkill } from './CardSkill';
