@@ -17,6 +17,7 @@ export const StyledCardGeneralInformation = styled('div', {
 
   '&:hover': {
     background: '$primary',
+    color: 'white',
   },
 });
 

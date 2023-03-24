@@ -83,6 +83,6 @@ export const HideThemeBox = styled('button', {
   '& svg': {
     width: 20,
     height: 20,
-    color: '$text',
+    color: 'white',
   },
 });

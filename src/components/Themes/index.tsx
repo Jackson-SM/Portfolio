@@ -2,9 +2,9 @@ import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons';
 import React, { useState } from 'react';
 
 import { useTheme } from '../../hooks/useTheme';
-import { blueTheme } from '../../styles/themes/blue';
-import { purpleTheme } from '../../styles/themes/purple';
-import { redTheme } from '../../styles/themes/red';
+import { blueTheme } from '../../styles/themes-colors/blue';
+import { purpleTheme } from '../../styles/themes-colors/purple';
+import { redTheme } from '../../styles/themes-colors/red';
 import * as Theme from './styles';
 
 type ThemeBoxProps = {
@@ -16,7 +16,7 @@ type ThemeBoxProps = {
 export function ThemeBox({ theme, color, title }: ThemeBoxProps) {
   const { changeTheme } = useTheme();
 
-  return <Theme.StyledThemeBox css={{ background: `${color}` }} onClick={() => changeTheme(theme)} />;
+  return <Theme.StyledThemeBox css={{ background: `${color}` }} />;
 }
 
 export function Themes() {

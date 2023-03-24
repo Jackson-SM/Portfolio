@@ -1,41 +1,48 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-import { blueTheme } from '../styles/themes/blue';
-import { purpleTheme } from '../styles/themes/purple';
-import { redTheme } from '../styles/themes/red';
+import { darkTheme } from '../styles/themes-mode/darkTheme';
+import { lightTheme } from '../styles/themes-mode/lightTheme';
 
 type ThemeContextProps = {
-  theme: typeof redTheme;
-  changeTheme(themeName: typeof redTheme): void;
+  theme: string;
+  changeTheme(): void;
 };
 
 export const ThemeContext = createContext({} as ThemeContextProps);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<typeof redTheme>(() => {
-    const issetThemeJSON = localStorage.getItem('theme-portfolio');
+  const [theme, setTheme] = useState<string>(() => {
+    const issetThemeJSON = localStorage.getItem('theme-mode');
 
-    if (issetThemeJSON === 'red-theme') {
-      return redTheme;
-    }
-    if (issetThemeJSON === 'blue-theme') {
-      return blueTheme;
-    }
-    if (issetThemeJSON === 'purple-theme') {
-      return purpleTheme;
+    if (issetThemeJSON) {
+      const html = document.querySelector('html');
+
+      html?.classList.remove(...html.classList);
+
+      html?.classList.add(issetThemeJSON === 'darkTheme' ? darkTheme : lightTheme);
+      return issetThemeJSON;
     }
 
-    localStorage.setItem('theme-portfolio', 'red-theme');
-    return redTheme;
+    return 'darkTheme';
   });
 
-  const changeTheme = (themeName: typeof redTheme) => {
-    setTheme(themeName);
+  console.log(theme);
 
-    localStorage.setItem('theme-portfolio', themeName.className);
+  const changeThemeInHTMLTag = () => {
+    const html = document.querySelector('html');
+    html?.classList.remove(...html.classList);
+    html?.classList.add(theme === 'darkTheme' ? lightTheme : darkTheme);
   };
 
-  console.log(theme);
+  const changeTheme = () => {
+    setTheme((themeName) => (themeName === 'darkTheme' ? 'lightTheme' : 'darkTheme'));
+
+    changeThemeInHTMLTag();
+  };
+
+  useEffect(() => {
+    localStorage.setItem('theme-mode', theme);
+  }, [theme]);
 
   return <ThemeContext.Provider value={{ theme, changeTheme }}>{children}</ThemeContext.Provider>;
 }

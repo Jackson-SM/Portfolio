@@ -28,12 +28,12 @@ export const NetworkCard = styled('a', {
     background: 'linear-gradient(to left, $primary, transparent 90%)',
   },
 
+  '& svg': {
+    color: 'white',
+  },
+
   '&:hover .icon_network': {
     background: '$primary',
-
-    '& svg': {
-      color: 'white',
-    },
   },
 });
 

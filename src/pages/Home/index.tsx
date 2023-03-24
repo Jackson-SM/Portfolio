@@ -3,6 +3,7 @@ import React from 'react';
 import { Navbar } from '../../components/Navbar';
 import { Themes } from '../../components/Themes';
 import { useTheme } from '../../hooks/useTheme';
+import { darkTheme } from '../../styles/themes-mode/darkTheme';
 import { Footer } from './components/Footer';
 import { Main } from './components/Main';
 import { GeneralInformation } from './components/SectionGeneralInformation';

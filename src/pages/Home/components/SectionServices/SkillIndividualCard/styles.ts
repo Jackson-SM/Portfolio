@@ -50,7 +50,7 @@ export const ContainerIcon = styled('div', {
     width: 30,
     height: 30,
 
-    color: '$text',
+    color: 'white',
   },
 
   '&::before': {

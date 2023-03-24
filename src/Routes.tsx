@@ -6,15 +6,13 @@ import { Home } from './pages/Home';
 import { GlobalCss } from './styles/GlobalCss';
 
 function AppRoutes() {
-  const { theme } = useTheme();
-
   useEffect(() => {
     GlobalCss();
   }, []);
 
   return (
     <Routes>
-      <Route path="/" element={<Home className={theme} />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }

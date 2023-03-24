@@ -5,7 +5,7 @@ import { styled } from '../../../../../config/stitches.config';
 export const StyledCardProject = styled('div', {
   width: 300,
   height: 150,
-  background: '$backgroundLight2',
+  background: '$background',
   padding: 10,
 
   display: 'flex',

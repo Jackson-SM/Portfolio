@@ -5,6 +5,7 @@ import logo from '../../assets/development_2.png';
 import { Box } from '../Box';
 import { TextColor } from '../TextColor';
 import { Themes } from '../Themes';
+import { ThemesMode } from '../ThemesMode';
 import { LinksNavbar } from './components/LinksNavbar';
 import { ButtonOpenOrClosedNavbar, LogoNavbar, StyledLogoImage, StyledNavbar } from './styles';
 
@@ -26,6 +27,7 @@ export function Navbar() {
       <ButtonOpenOrClosedNavbar onClick={toggleMinimizedNavbar}>
         <HamburgerMenuIcon />
       </ButtonOpenOrClosedNavbar>
+      <ThemesMode />
     </StyledNavbar>
   );
 }
