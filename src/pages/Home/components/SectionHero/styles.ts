@@ -132,7 +132,7 @@ export const IconStack = styled('div', {
   borderRadius: '50%',
 
   opacity: 0,
-  transform: 'translateX(40px)',
+  transform: 'translateX(80px)',
 
   transition: 'background ease 200ms',
 

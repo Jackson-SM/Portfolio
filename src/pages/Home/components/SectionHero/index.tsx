@@ -90,8 +90,8 @@ export function SectionHero() {
           return (
             <IconStack
               style={{
-                animation: `${showIcon} ${index + 1}s ease-in-out`,
-                animationDelay: `${(index / 2 + 1) / 2}s`,
+                animation: `${showIcon} 1s ease-in-out`,
+                animationDelay: `${(index + 1) / 2}s`,
                 animationFillMode: 'forwards',
               }}
               key={img.toString()}
