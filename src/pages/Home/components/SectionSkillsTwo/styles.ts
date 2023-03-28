@@ -12,7 +12,6 @@ export const ContentSectionTwo = styled('div', {
   alignItems: 'start',
   justifyContent: 'space-around',
   gap: 20,
-
   padding: 10,
 
   '@large': {
@@ -26,7 +25,7 @@ export const ContentSectionTwo = styled('div', {
 });
 
 export const ContentSkillsTop = styled('div', {
-  background: '$backgroundTransparence2',
+  background: '$background',
   padding: 5,
   margin: 5,
   borderRadius: 5,
@@ -59,4 +58,7 @@ export const ContentSkillsSection = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 350px))',
   gap: 10,
+
+  boxShadow: `0 0 20px 2px rgba(0, 0, 0, 0.28)`,
+  padding: 10,
 });

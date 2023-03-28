@@ -1,5 +1,4 @@
 import React from 'react';
-import { SiHtml5 } from 'react-icons/si';
 
 import {
   ContentSkillCard,

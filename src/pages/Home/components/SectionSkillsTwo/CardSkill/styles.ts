@@ -3,11 +3,20 @@ import { styled } from '../../../../../config/stitches.config';
 export const StyledSkillsCard = styled('div', {
   display: 'flex',
   gap: 10,
+
+  padding: 5,
+  borderRadius: '3px',
+
+  transition: 'background ease 130ms',
+
+  '&:hover': {
+    background: '$backgroundLight2',
+  },
 });
 
 export const IconContainer = styled('div', {});
 export const StyledIcon = styled('div', {
-  background: '$backgroundLight',
+  background: '$backgroundLight2',
   padding: 8,
 
   display: 'flex',
