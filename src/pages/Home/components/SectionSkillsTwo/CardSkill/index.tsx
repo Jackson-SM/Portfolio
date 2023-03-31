@@ -9,30 +9,35 @@ import {
   TitleSkillCard,
 } from './styles';
 
-interface IPropsCardSkill extends React.ComponentProps<typeof StyledSkillsCard> {
+interface IPropsStack {
   title: string;
   icon: JSX.Element;
   description: string;
   color: string;
 }
 
-export function CardSkill({ title, icon, description, color }: IPropsCardSkill) {
+interface ICardSkillProps extends React.ComponentProps<typeof StyledSkillsCard> {
+  stack: IPropsStack;
+  lastChild: boolean;
+}
+
+export function CardSkill({ stack, lastChild, ...props }: ICardSkillProps) {
   return (
-    <StyledSkillsCard>
+    <StyledSkillsCard {...props}>
       <IconContainer>
         <StyledIcon
           css={{
             '& svg': {
-              color: `${color}`,
+              color: `${stack.color}`,
             },
           }}
         >
-          {icon}
+          {stack.icon}
         </StyledIcon>
       </IconContainer>
       <ContentSkillCard>
-        <TitleSkillCard>{title}</TitleSkillCard>
-        <DescriptionCard>{description}</DescriptionCard>
+        <TitleSkillCard>{stack.title}</TitleSkillCard>
+        <DescriptionCard>{stack.description}</DescriptionCard>
       </ContentSkillCard>
     </StyledSkillsCard>
   );

@@ -9,12 +9,34 @@ export const StyledSkillsCard = styled('div', {
 
   transition: 'background ease 130ms',
 
+  position: 'relative',
+
+  zIndex: '1',
+
   '&:hover': {
     background: '$backgroundLight2',
+  },
+
+  '&::after': {
+    content: '',
+
+    position: 'absolute',
+
+    background: '$tertiary',
+    width: 10,
+    height: 10,
+
+    borderRadius: '50%',
+
+    left: 'calc(100% - 4px)',
+    top: 'calc(50% - 5px)',
+
+    zIndex: '-1',
   },
 });
 
 export const IconContainer = styled('div', {});
+
 export const StyledIcon = styled('div', {
   background: '$backgroundLight2',
   padding: 8,

@@ -1,4 +1,7 @@
 import { styled } from '../../../../config/stitches.config';
+import { IconContainer } from './CardSkill/styles';
+
+IconContainer.toString = () => '.line-skill';
 
 export const ContainerSectionTwo = styled('section', {
   padding: '10px 40px 10px 40px',
@@ -9,10 +12,8 @@ export const ContainerSectionTwo = styled('section', {
 
 export const ContentSectionTwo = styled('div', {
   display: 'flex',
-  alignItems: 'start',
   justifyContent: 'space-around',
-  gap: 20,
-  padding: 10,
+  alignItems: 'start',
 
   '@large': {
     flexDirection: 'column',
@@ -40,11 +41,7 @@ export const ContentSkillsTop = styled('div', {
     color: '$textDark',
   },
 });
-export const ContentSkillsBody = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 20,
-});
+
 export const ContentSkillTitle = styled('h1', {
   color: '$textDark2',
   display: 'flex',
@@ -61,4 +58,6 @@ export const ContentSkillsSection = styled('div', {
 
   boxShadow: `0 0 20px 2px rgba(0, 0, 0, 0.28)`,
   padding: 10,
+
+  position: 'relative',
 });

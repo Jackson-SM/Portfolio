@@ -9,8 +9,8 @@ export const { styled, globalCss, keyframes, theme, createTheme } = createStitch
       secundary: 'hsl(87, 82%, 60%)',
       secundaryLight: 'hsl(87, 90%, 70%)',
 
-      tertiary: 'hsl(161, 73%, 63%)',
-      tertiaryLight: 'hsl(162, 80%, 76%)',
+      tertiary: 'hsla(300, 72%, 50%, 1)',
+      tertiaryLight: 'hsla(300, 68%, 50%, 1)',
 
       background: 'hsl(0, 0%, 5%)',
       backgroundLight2: 'hsl(0, 0%, 10%)',

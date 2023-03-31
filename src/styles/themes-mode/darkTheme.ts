@@ -8,8 +8,8 @@ export const darkTheme = createTheme('dark-theme', {
     secundary: 'hsl(87, 82%, 60%)',
     secundaryLight: 'hsl(87, 90%, 70%)',
 
-    tertiary: 'hsl(161, 73%, 63%)',
-    tertiaryLight: 'hsl(162, 80%, 76%)',
+    tertiary: 'hsla(300, 72%, 50%, 1)',
+    tertiaryLight: 'hsla(300, 68%, 50%, 1)',
 
     background: 'hsla(230, 17%, 12%, 1)',
     backgroundLight: 'hsla(230, 9%, 41%, 1)',
