@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BsCodeSlash } from 'react-icons/bs';
 
 import { CardSkill } from '../CardSkill';
 import { CollapseSkills, IPropsCollapseSkills } from '../CollapseSkill';
@@ -11,7 +10,7 @@ interface ICollapse {
   collapseSkillProps: IPropsCollapseSkills;
 }
 
-export function Collapse({ stackSkill, title, collapseSkillProps }: ICollapse) {
+export function Collapse({ stackSkill, collapseSkillProps }: ICollapse) {
   const [collapsed, setCollapsed] = useState<boolean>(true);
 
   return (
