@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { styled } from '../../../../config/stitches.config';
 import { ButtonOpenOrClosedNavbar } from '../../styles';
 
