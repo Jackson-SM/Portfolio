@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { TextColor } from '../../../../components/TextColor';
 import { TopSections } from '../../../../components/TopSections';
 import { TitleSection } from '../TitleSection';
 import { CardProject } from './CardProject';

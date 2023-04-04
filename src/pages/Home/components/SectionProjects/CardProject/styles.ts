@@ -1,6 +1,4 @@
-import { BsCodeSlash } from 'react-icons/bs';
-
-import { styled } from '../../../../../config/stitches.config';
+import { keyframes, styled } from '../../../../../config/stitches.config';
 
 export const StyledCardProject = styled('div', {
   width: 300,
@@ -17,20 +15,47 @@ export const StyledCardProject = styled('div', {
   borderRadius: '5px',
 
   boxShadow: `4px 4px 10px 2px rgba(106, 106, 106, 0.27)`,
+
+  '&:hover span': {
+    color: '$primaryLight',
+  },
+
+  '&:hover .icon-container-card': {
+    pointerEvents: 'auto',
+  },
+  '&:hover .icon-card': {
+    marginTop: '0',
+    opacity: 1,
+  },
 });
 
 export const TitleCardProject = styled('span', {
   fontSize: '22px',
   color: '$textDark',
+
+  transition: 'color ease 130ms',
 });
 
 export const IconContainerCard = styled('div', {
   display: 'flex',
+  gap: 10,
+
+  '& svg': {
+    width: 28,
+    height: 28,
+  },
+
+  pointerEvents: 'none',
 });
 
-export const IconCardProject = styled(BsCodeSlash, {
-  width: 20,
-  height: 20,
+export const StyledIcons = styled('div', {
+  display: 'flex',
+  borderRadius: '50%',
+  overflow: 'hidden',
+
+  opacity: 0,
+  marginTop: '-40px',
+  transition: 'all ease',
 });
 
 export const LinkCardProject = styled('a', {

@@ -1,4 +1,14 @@
-import { SiBootstrap, SiCss3, SiHtml5, SiJava, SiJavascript, SiNodedotjs, SiPhp, SiReact } from 'react-icons/si';
+import {
+  SiBootstrap,
+  SiCss3,
+  SiHtml5,
+  SiJava,
+  SiJavascript,
+  SiJest,
+  SiNodedotjs,
+  SiPhp,
+  SiReact,
+} from 'react-icons/si';
 
 import dashboard from '../../../../assets/projects-images/dashboard.png';
 import desafioFooter from '../../../../assets/projects-images/desafio_footer.png';
@@ -31,6 +41,7 @@ export const colorsStacks = [
     php: '#456a96',
     bootstrap: '#bc2dff',
     reactjs: '#10c7ff',
+    jest: '#c26c91',
   },
 ];
 export const projects: itemsProjects[] = [
@@ -61,10 +72,10 @@ export const projects: itemsProjects[] = [
     cover: megacineHero,
     samples: [megacineDashboard, megacineResponsive, megacineResponsive2, megacineCard, megacineSerie],
     stacks: [
-      { name: 'PHP', color: colorsStacks[0].php, icon: <SiPhp /> },
       { name: 'HTML', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
+      { name: 'PHP', color: colorsStacks[0].php, icon: <SiPhp /> },
     ],
     link: 'https://github.com/Jackson-SM/devcine',
   },
@@ -74,6 +85,7 @@ export const projects: itemsProjects[] = [
     stacks: [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
       { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
+      { name: 'Jest', color: colorsStacks[0].jest, icon: <SiJest /> },
     ],
     link: 'https://dashlearn.netlify.app/',
   },
@@ -84,6 +96,7 @@ export const projects: itemsProjects[] = [
     stacks: [
       { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+      { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
     ],
     link: 'https://github.com/Jackson-SM/landingPage-Pratic',
   },
