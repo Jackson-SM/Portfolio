@@ -11,9 +11,9 @@ export const lightTheme = createTheme('light-theme', {
     tertiary: 'hsla(300, 72%, 50%, 1)',
     tertiaryLight: 'hsla(300, 68%, 50%, 1)',
 
-    background: 'hsl(0, 0%, 85%)',
-    backgroundLight: 'hsl(0, 0%, 80%)',
-    backgroundLight2: 'hsl(0, 0%, 75%)',
+    background: 'hsla(246, 100%, 98%, 1)',
+    backgroundLight: 'hsla(196, 0%, 96%, 1)',
+    backgroundLight2: 'hsla(196, 0%, 98%, 1)',
 
     backgroundTransparence: 'hsl(0, 0%, 15%, 0.9)',
     backgroundTransparence2: 'hsl(0, 0%, 15%, 0.5)',

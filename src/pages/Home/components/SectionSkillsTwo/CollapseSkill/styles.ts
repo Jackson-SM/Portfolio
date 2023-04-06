@@ -27,7 +27,9 @@ export const CollapseSkill = styled('button', {
   '& svg': {
     width: 25,
     height: 25,
-    color: 'red',
+    color: '$primary',
+    fill: '$primary',
+    stroke: '$primary',
   },
 
   '&::before': {

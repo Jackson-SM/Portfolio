@@ -1,8 +1,6 @@
 import React from 'react';
 
-export type IconsProps = {
-  color: string;
-};
+import { IconsProps } from './BackendIcon';
 
 export function DevopsIcon({ color }: IconsProps) {
   return (

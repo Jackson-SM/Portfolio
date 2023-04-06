@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type IconsProps = {
-  color: string;
+  color?: string;
 };
 
 export function BackendIcon({ color }: IconsProps) {

@@ -25,22 +25,10 @@ function SectionSkillsTwo() {
       </TopSections>
 
       <SkillsTwo.ContentSectionTwo>
-        <Collapse
-          stackSkill={stacksFront}
-          collapseSkillProps={{ title: 'Front-End', icon: <FrontendIcon color="white" /> }}
-        />
-        <Collapse
-          stackSkill={stacksBack}
-          collapseSkillProps={{ title: 'Back-End', icon: <BackendIcon color="white" /> }}
-        />
-        <Collapse
-          stackSkill={stacksDatabases}
-          collapseSkillProps={{ title: 'Database', icon: <DatabaseIcon color="white" /> }}
-        />
-        <Collapse
-          stackSkill={stacksDevops}
-          collapseSkillProps={{ title: 'DevOps', icon: <DevopsIcon color="white" /> }}
-        />
+        <Collapse stackSkill={stacksFront} collapseSkillProps={{ title: 'Front-End', icon: <FrontendIcon /> }} />
+        <Collapse stackSkill={stacksBack} collapseSkillProps={{ title: 'Back-End', icon: <BackendIcon /> }} />
+        <Collapse stackSkill={stacksDatabases} collapseSkillProps={{ title: 'Database', icon: <DatabaseIcon /> }} />
+        <Collapse stackSkill={stacksDevops} collapseSkillProps={{ title: 'DevOps', icon: <DevopsIcon /> }} />
       </SkillsTwo.ContentSectionTwo>
     </SkillsTwo.ContainerSectionTwo>
   );
