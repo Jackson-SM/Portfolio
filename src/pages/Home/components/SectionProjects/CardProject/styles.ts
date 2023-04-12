@@ -1,78 +1,53 @@
 import { keyframes, styled } from '../../../../../config/stitches.config';
 
 export const StyledCardProject = styled('div', {
-  width: 300,
-  height: 150,
-  background: '$background',
-  padding: 10,
-
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
-
-  margin: '0 auto',
-
-  borderRadius: '5px',
-
-  boxShadow: `4px 4px 10px 2px rgba(106, 106, 106, 0.27)`,
-
-  '&:hover span': {
-    color: '$primaryLight',
-  },
-
-  '&:hover .icon-container-card': {
-    pointerEvents: 'auto',
-  },
-  '&:hover .icon-card': {
-    marginTop: '0',
-    opacity: 1,
-  },
+  alignItems: 'center',
+  gap: 10,
 });
 
-export const TitleCardProject = styled('span', {
-  fontSize: '22px',
-  color: '$textDark',
-
-  transition: 'color ease 130ms',
-});
+export const TitleCardProject = styled('span', {});
 
 export const IconContainerCard = styled('div', {
   display: 'flex',
-  gap: 10,
 
-  '& svg': {
-    width: 28,
-    height: 28,
+  gap: 20,
+
+  '& .icon-card': {
+    background: 'red',
   },
-
-  pointerEvents: 'none',
 });
 
 export const StyledIcons = styled('div', {
-  display: 'flex',
+  position: 'relative',
+
   borderRadius: '50%',
-  overflow: 'hidden',
 
-  opacity: 0,
-  marginTop: '-40px',
-  transition: 'all ease',
-});
+  width: 30,
+  height: 30,
 
-export const LinkCardProject = styled('a', {
-  fontSize: '$2',
+  '& svg': {
+    width: 30,
+    height: 30,
+    padding: 5,
+  },
 
-  display: 'flex',
-  alignItems: 'center',
+  zIndex: '-1',
 
-  gap: 5,
-  width: 'max-content',
+  '&::before': {
+    content: '',
 
-  textDecoration: 'none',
-  color: '$textDark',
+    zIndex: '-1',
 
-  transition: 'color ease 200ms',
+    position: 'absolute',
 
-  '&:hover': {
-    color: '$primary',
+    background: '$backgroundLight',
+
+    height: '2px',
+    width: '100%',
+
+    top: '50%',
+    right: '-100%',
   },
 });

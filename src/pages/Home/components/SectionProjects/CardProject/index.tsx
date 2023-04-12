@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-import { IconContainerCard, LinkCardProject, StyledCardProject, StyledIcons, TitleCardProject } from './styles';
+import { IconContainerCard, StyledCardProject, StyledIcons, TitleCardProject } from './styles';
 
 export type stacksTypeCarousel = {
   name: string;
@@ -32,7 +32,6 @@ export function CardProject({ project, ...props }: CardProjectProps) {
                 '& svg': {
                   color: `${stack.color}`,
                   background: '$backgroundLight2',
-                  padding: 5,
                 },
                 transitionDuration: `${(index + 1) / 8}s`,
                 transitionDelay: `${(index + 1) / 8}s`,
@@ -45,9 +44,6 @@ export function CardProject({ project, ...props }: CardProjectProps) {
         })}
       </IconContainerCard>
       <TitleCardProject>{project.title}</TitleCardProject>
-      <LinkCardProject href={project.link}>
-        Ver Mais <AiOutlineArrowRight />
-      </LinkCardProject>
     </StyledCardProject>
   );
 }
