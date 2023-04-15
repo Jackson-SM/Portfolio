@@ -1,5 +1,4 @@
 import React from 'react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 
 import { IconContainerCard, StyledCardProject, StyledIcons, TitleCardProject } from './styles';
 
@@ -23,7 +22,17 @@ export type CardProjectProps = React.ComponentProps<typeof StyledCardProject> & 
 
 export function CardProject({ project, ...props }: CardProjectProps) {
   return (
-    <StyledCardProject {...props}>
+    <StyledCardProject
+      href={project.link}
+      target="_blank"
+      {...props}
+      css={{
+        '&:hover .icon-card': {
+          opacity: 1,
+          transform: 'translateX(0)',
+        },
+      }}
+    >
       <IconContainerCard className="icon-container-card">
         {project.stacks?.map((stack, index) => {
           return (
@@ -31,7 +40,6 @@ export function CardProject({ project, ...props }: CardProjectProps) {
               css={{
                 '& svg': {
                   color: `${stack.color}`,
-                  background: '$backgroundLight2',
                 },
                 transitionDuration: `${(index + 1) / 8}s`,
                 transitionDelay: `${(index + 1) / 8}s`,
