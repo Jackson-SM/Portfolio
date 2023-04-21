@@ -48,9 +48,8 @@ export function SectionHero() {
             <Button
               as="a"
               target="__blank"
-              href="https://drive.google.com/uc?export=download&id=1VqHxddgztz7ezunKxN9agmTwCPRV_S1s"
+              href="https://drive.google.com/uc?export=download&id=1gheWgUHUbT3aHuPqIxXB-St6K1E1IQ1r"
               color="primary"
-              rounded
               css={{ width: 'max-content', pointerEvents: 'auto' }}
             >
               Download CV
