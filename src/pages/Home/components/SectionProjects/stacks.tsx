@@ -80,7 +80,7 @@ export const projects: itemsProjects[] = [
     link: 'https://github.com/Jackson-SM/devcine',
   },
   {
-    title: 'Dashboard',
+    title: 'DashLearn',
     cover: dashboard,
     stacks: [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
@@ -109,5 +109,16 @@ export const projects: itemsProjects[] = [
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
     ],
     link: 'https://jackson-sm.github.io/navbar-responsive/',
+  },
+  {
+    title: 'JK Company',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [
+      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
+      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
+      { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
+    ],
+    link: 'https://jackson-sm.github.io/JK-Company/',
   },
 ];
