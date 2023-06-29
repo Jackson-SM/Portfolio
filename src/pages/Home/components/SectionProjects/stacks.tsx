@@ -1,13 +1,16 @@
 import {
-  SiBootstrap,
+  SiAdonisjs,
   SiCss3,
   SiHtml5,
-  SiJava,
   SiJavascript,
   SiJest,
+  SiNestjs,
   SiNodedotjs,
   SiPhp,
+  SiPython,
   SiReact,
+  SiRust,
+  SiTypescript,
 } from 'react-icons/si';
 
 import dashboard from '../../../../assets/projects-images/dashboard.png';
@@ -38,10 +41,15 @@ export const colorsStacks = [
     css3: '#2da1ff',
     nodejs: '#34921c',
     javascript: '#f1ff2d',
+    typescript: '#2dbcff',
     php: '#456a96',
     bootstrap: '#bc2dff',
     reactjs: '#10c7ff',
     jest: '#c26c91',
+    rust: '#eb8e2b',
+    python: '#fff04f',
+    adonisjs: '#7651c4',
+    nestjs: '#ff3f3f',
   },
 ];
 export const projects: itemsProjects[] = [
@@ -63,9 +71,8 @@ export const projects: itemsProjects[] = [
       { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
       { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
-      { name: 'Node.Js', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
     ],
-    link: 'https://github.com/Jackson-SM/landingPage-Pratic',
+    link: 'https://github.com/Jackson-SM/infinite',
   },
   {
     title: 'DevCine',
@@ -80,6 +87,17 @@ export const projects: itemsProjects[] = [
     link: 'https://github.com/Jackson-SM/devcine',
   },
   {
+    title: 'Jupiter',
+    cover: megacineHero,
+    samples: [megacineDashboard, megacineResponsive, megacineResponsive2, megacineCard, megacineSerie],
+    stacks: [
+      { name: 'Typescript', color: colorsStacks[0].typescript, icon: <SiTypescript /> },
+      { name: 'Node', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
+      { name: 'Jest', color: colorsStacks[0].jest, icon: <SiJest /> },
+    ],
+    link: 'https://github.com/Jackson-SM/Jupiter-API',
+  },
+  {
     title: 'DashLearn',
     cover: dashboard,
     stacks: [
@@ -87,28 +105,7 @@ export const projects: itemsProjects[] = [
       { name: 'ReactJS', color: colorsStacks[0].reactjs, icon: <SiReact /> },
       { name: 'Jest', color: colorsStacks[0].jest, icon: <SiJest /> },
     ],
-    link: 'https://dashlearn.netlify.app/',
-  },
-  {
-    title: 'Desafio',
-    cover: desafioHero,
-    samples: [desafioPlayers, desafioFooter],
-    stacks: [
-      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
-      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
-      { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
-    ],
-    link: 'https://github.com/Jackson-SM/landingPage-Pratic',
-  },
-  {
-    title: 'Navbar Responsive',
-    cover: desafioHero,
-    samples: [desafioPlayers, desafioFooter],
-    stacks: [
-      { name: 'HTML5', color: colorsStacks[0].html5, icon: <SiHtml5 /> },
-      { name: 'CSS3', color: colorsStacks[0].css3, icon: <SiCss3 /> },
-    ],
-    link: 'https://jackson-sm.github.io/navbar-responsive/',
+    link: 'https://github.com/Jackson-SM/DashLearn',
   },
   {
     title: 'JK Company',
@@ -120,5 +117,41 @@ export const projects: itemsProjects[] = [
       { name: 'Javascript', color: colorsStacks[0].javascript, icon: <SiJavascript /> },
     ],
     link: 'https://jackson-sm.github.io/JK-Company/',
+  },
+  {
+    title: 'Generate Password',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [{ name: 'Rust', color: colorsStacks[0].rust, icon: <SiRust /> }],
+    link: 'https://github.com/Jackson-SM/generate_password',
+  },
+  {
+    title: 'Password Crypto',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [{ name: 'Python', color: colorsStacks[0].python, icon: <SiPython /> }],
+    link: 'https://github.com/Jackson-SM/password_crypto',
+  },
+  {
+    title: 'Api Fulgur Filmes',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [
+      { name: 'Node', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
+      { name: 'Typescript', color: colorsStacks[0].typescript, icon: <SiTypescript /> },
+      { name: 'Adonisjs', color: colorsStacks[0].adonisjs, icon: <SiAdonisjs /> },
+    ],
+    link: 'https://github.com/Jackson-SM/api-fulgurfilmes',
+  },
+  {
+    title: 'NotificationService',
+    cover: desafioHero,
+    samples: [desafioPlayers, desafioFooter],
+    stacks: [
+      { name: 'Node', color: colorsStacks[0].nodejs, icon: <SiNodedotjs /> },
+      { name: 'Typescript', color: colorsStacks[0].typescript, icon: <SiTypescript /> },
+      { name: 'Nestjs', color: colorsStacks[0].nestjs, icon: <SiNestjs /> },
+    ],
+    link: 'https://github.com/Jackson-SM/NotificationService',
   },
 ];
