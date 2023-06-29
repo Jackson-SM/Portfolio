@@ -1,11 +1,12 @@
 import React from 'react';
 
+import Java from '../../../../assets/icons_stacks/java.svg';
 import Javascript from '../../../../assets/icons_stacks/logo-javascript.svg';
 import NestJs from '../../../../assets/icons_stacks/nestjs.svg';
 import NodeJs from '../../../../assets/icons_stacks/nodejs-1.svg';
+import Python from '../../../../assets/icons_stacks/python.svg';
 import react from '../../../../assets/icons_stacks/react-2.svg';
 import Typescript from '../../../../assets/icons_stacks/typescript.svg';
-import VsCode from '../../../../assets/icons_stacks/visual-studio-code-1.svg';
 import photo from '../../../../assets/photo.jpeg';
 import { Box } from '../../../../components/Box';
 import { Button } from '../../../../components/Button';
@@ -23,7 +24,7 @@ import {
 } from './styles';
 
 export function SectionHero() {
-  const stacksImages = [Javascript, NodeJs, NestJs, react, Typescript, VsCode];
+  const stacksImages = [Javascript, Typescript, NodeJs, NestJs, Java, Python, react];
 
   return (
     <ContainerHero id="aboutme">
