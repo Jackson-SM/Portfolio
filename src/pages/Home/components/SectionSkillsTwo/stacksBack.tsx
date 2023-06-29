@@ -1,4 +1,4 @@
-import { SiJest, SiNodedotjs, SiPhp, SiTypescript } from 'react-icons/si';
+import { SiJava, SiJest, SiNodedotjs, SiPhp, SiPython, SiTypescript } from 'react-icons/si';
 
 import { StacksType } from './stacksType';
 
@@ -8,6 +8,18 @@ export const stacksBack: StacksType[] = [
     icon: <SiNodedotjs />,
     description: 'Construções de Api utilizando Node.JS dentre outros frameworks como Nest.JS ou Adonis.JS',
     color: '#2eb903',
+  },
+  {
+    title: 'Java',
+    icon: <SiJava />,
+    description: 'Estudando Java',
+    color: '#9d8550',
+  },
+  {
+    title: 'Python',
+    icon: <SiPython />,
+    description: 'Construindo aplicações utilizando bibliotecas e projetos de criptografia.',
+    color: '#f6ff72',
   },
   {
     title: 'Typescript',

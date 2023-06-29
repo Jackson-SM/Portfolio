@@ -11,6 +11,9 @@ import {
   SiMysql,
   SiMongodb,
   SiCsharp,
+  SiJava,
+  SiRust,
+  SiPython,
 } from 'react-icons/si';
 
 import { TextColor } from '../../../../components/TextColor';
@@ -140,6 +143,24 @@ const stacks: IStacksProps[] = [
         stack: 'Jest Testing / E2E / Integração / Unitário',
       },
     ],
+  },
+  {
+    stack: 'Python',
+    stackType: 'backend',
+    color: '#6b8adf',
+    icon: <SiPython />,
+  },
+  {
+    stack: 'Rust',
+    stackType: 'backend',
+    color: '#6b8adf',
+    icon: <SiRust />,
+  },
+  {
+    stack: 'Java',
+    stackType: 'backend',
+    color: '#6b8adf',
+    icon: <SiJava />,
   },
   {
     stack: 'PHP',
