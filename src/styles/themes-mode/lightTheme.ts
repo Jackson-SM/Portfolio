@@ -2,15 +2,14 @@ import { createTheme } from '../../config/stitches.config';
 
 export const lightTheme = createTheme('light-theme', {
   colors: {
-    primary: 'hsl(350, 74%, 51%)',
-    primaryLight: 'hsl(350, 89%, 62%)',
+    primary: 'hsla(153, 100%, 50%, 1)',
+    primaryLight: 'hsla(153, 100%, 67%, 1)',
 
-    secundary: 'hsl(87, 82%, 60%)',
-    secundaryLight: 'hsl(87, 90%, 70%)',
+    secondary: 'hsla(192, 100%, 57%, 1)',
+    secondaryLight: 'hsla(192, 100%, 73%, 1)',
 
-    tertiary: 'hsla(300, 72%, 50%, 1)',
-    tertiaryLight: 'hsla(300, 68%, 50%, 1)',
-
+    tertiary: 'hsla(281, 100%, 56%, 1)',
+    tertiaryLight: 'hsla(281, 100%, 74%, 1)',
     background: 'hsla(246, 100%, 98%, 1)',
     backgroundLight: 'hsla(196, 0%, 96%, 1)',
     backgroundLight2: 'hsla(196, 0%, 98%, 1)',
