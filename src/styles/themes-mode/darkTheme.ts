@@ -2,7 +2,7 @@ import { createTheme } from '../../config/stitches.config';
 
 export const darkTheme = createTheme('dark-theme', {
   colors: {
-    primary: 'hsla(153, 100%, 50%, 1)',
+    primary: 'hsla(269, 82%, 60%, 1)',
     primaryLight: 'hsla(153, 100%, 67%, 1)',
 
     secondary: 'hsla(192, 100%, 57%, 1)',
