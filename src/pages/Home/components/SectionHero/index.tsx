@@ -1,4 +1,3 @@
-import React from 'react';
 
 import Java from '../../../../assets/icons_stacks/java.svg';
 import Javascript from '../../../../assets/icons_stacks/logo-javascript.svg';
@@ -12,13 +11,13 @@ import { Box } from '../../../../components/Box';
 import { Button } from '../../../../components/Button';
 import { TextColor } from '../../../../components/TextColor';
 import {
-  IconStack,
   ContainerApresentation,
   ContainerHero,
   ContainerInfo,
   ContainerPersonInfo,
   ContainerStacks,
   ContentHero,
+  IconStack,
   StyledPhoto,
   showIcon,
 } from './styles';
@@ -49,7 +48,7 @@ export function SectionHero() {
             <Button
               as="a"
               target="__blank"
-              href="https://drive.google.com/uc?export=download&id=1gheWgUHUbT3aHuPqIxXB-St6K1E1IQ1r"
+              href="/resume.pdf"
               color="primary"
               css={{ width: 'max-content', pointerEvents: 'auto' }}
             >
