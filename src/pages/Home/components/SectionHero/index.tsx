@@ -1,4 +1,3 @@
-
 import Java from '../../../../assets/icons_stacks/java.svg';
 import Javascript from '../../../../assets/icons_stacks/logo-javascript.svg';
 import NestJs from '../../../../assets/icons_stacks/nestjs.svg';
